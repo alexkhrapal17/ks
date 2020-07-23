@@ -1,0 +1,32 @@
+$default-font: 'Montserrat', sans-serif;
+
+// Colors
+$white: #FFF;
+$cornflower-blue: #333;
+$east-bay: #46587A;
+$burnt-sienna: #EB5757;
+$cream-can: #F2C94C;
+$de-york: #6FCF97;
+
+// Font weight
+$font-light: 300;
+$font-regular: 400;
+$font-medium: 500;
+$font-semi-bold: 600;
+$font-bold: 700;
+$font-extra-bold: 800;
+
+
+// Customization Bootstrap vars from "app/libs/bootstrap/scss/_variables.scss"
+$grid-gutter-width: 30px;
+$grid-columns: 12;
+$grid-breakpoints: (xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px);
+$container-max-widths: (sm: 540px, md: 720px, lg: 960px, xl: 1140px);
+
+$gutter: $grid-gutter-width;
+
+// Media
+$screen-lg: 1200px;
+$screen-md: 992px;
+$screen-sm: 767px;
+$screen-xs: 575px;

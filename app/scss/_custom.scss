@@ -1,0 +1,178 @@
+* {
+  box-sizing: border-box;
+  outline: none !important;
+}
+
+body {
+  font-size: 16px;
+  min-width: 320px;
+  position: relative;
+  font-family: $default-font;
+  color: $east-bay;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
+  height: 10000px;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+input, textarea {
+  border-radius: 0;
+  -webkit-appearance: none;
+}
+
+main {
+  flex: 1;
+}
+
+.outer-wrapper {
+  padding: 75px 0;
+}
+
+.inner-wrapper {
+  max-width: 1612px;
+  margin: 0 auto;
+  padding: 0 16px;
+  position: relative;
+}
+
+.reset-position {
+  position: static !important;
+  top: auto !important;
+  left: auto !important;
+  bottom: auto !important;
+  right: auto !important;
+  transform: none !important;
+}
+
+.hide-mobile {
+  @include phone {
+    display: none !important;
+  }
+}
+
+.show-mobile {
+  display: none;
+
+  @include phone {
+    display: block !important;
+  }
+}
+
+// Custom dividers
+.mt-8 {
+  margin-top: 8px;
+}
+.mr-8 {
+  margin-right: 8px;
+}
+.mb-8 {
+  margin-bottom: 8px;
+}
+.ml-8 {
+  margin-left: 8px;
+}
+
+.mt-16 {
+  margin-top: 16px;
+}
+.mr-16 {
+  margin-right: 16px;
+}
+.mb-16 {
+  margin-bottom: 16px;
+}
+.ml-16 {
+  margin-left: 16px;
+}
+
+.mt-20 {
+  margin-top: 20px;
+}
+.mr-20 {
+  margin-right: 20px;
+}
+.mb-20 {
+  margin-bottom: 20px;
+}
+.ml-20 {
+  margin-left: 20px;
+}
+
+.mt-25 {
+  margin-top: 25px;
+}
+.mr-25 {
+  margin-right: 25px;
+}
+.mb-25 {
+  margin-bottom: 25px;
+}
+.ml-25 {
+  margin-left: 25px;
+}
+
+.mt-32 {
+  margin-top: 32px;
+}
+.mr-32 {
+  margin-right: 32px;
+}
+.mb-32 {
+  margin-bottom: 32px;
+}
+.ml-32 {
+  margin-left: 32px;
+}
+
+.mt-40 {
+  margin-top: 40px;
+}
+.mr-40 {
+  margin-right: 40px;
+}
+.mb-40 {
+  margin-bottom: 40px;
+}
+.ml-40 {
+  margin-left: 40px;
+}
+
+.mt-40 {
+  margin-top: 40px;
+}
+.mr-40 {
+  margin-right: 40px;
+}
+.mb-40 {
+  margin-bottom: 40px;
+}
+.ml-40 {
+  margin-left: 40px;
+}
+
+.mt-50 {
+  margin-top: 50px;
+}
+.mr-50 {
+  margin-right: 50px;
+}
+.mb-50 {
+  margin-bottom: 50px;
+}
+.ml-50 {
+  margin-left: 50px;
+}

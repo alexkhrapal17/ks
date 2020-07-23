@@ -1,0 +1,118 @@
+.title {
+  font-weight: $font-bold;
+  margin: 0;
+
+  &.is-1 {
+    font-size: 36px;
+    line-height: 44px;
+  }
+
+  &.is-2 {
+    font-size: 30px;
+    line-height: 37px;
+  }
+
+  &.is-3 {
+    font-size: 24px;
+    line-height: 29px;
+  }
+
+  &.is-4 {
+    font-size: 18px;
+    line-height: 22px;
+  }
+}
+
+p {
+  font-size: 13px;
+  line-height: 16px;
+  margin: 0;
+}
+
+a {
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.text-uppercase {
+  text-transform: uppercase;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+// Fonts
+.light {
+  font-weight: $font-light;
+}
+
+.regular {
+  font-weight: $font-regular;
+}
+
+.medium {
+  font-weight: $font-medium;
+}
+
+.semi-bold {
+  font-weight: $font-semi-bold;
+}
+
+.bold {
+  font-weight: $font-bold;
+}
+
+.extra-bold {
+  font-weight: $font-extra-bold;
+}
+
+// Colors
+.white {
+  color: #FFF;
+}
+.bg-white {
+  background-color: #FFF;
+}
+
+.east-bay {
+  color: #46587A;
+}
+.bg-east-bay {
+  background-color: #46587A;
+}
+
+.burnt-sienna {
+  color: #EB5757;
+}
+.bg-burnt-sienna {
+  background-color: #EB5757;
+}
+
+.cream-can {
+  color: #F2C94C;
+}
+.bg-cream-can {
+  background-color: #F2C94C;
+}
+
+.de-york {
+  color: #6FCF97;
+}
+.bg-de-york {
+  background-color: #6FCF97;
+}
