@@ -64,6 +64,10 @@
       position: relative;
       margin-right: 20px;
 
+      &:after {
+        display: none;
+      }
+
       &:last-child {
         margin-right: 0;
       }

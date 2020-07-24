@@ -1,0 +1,62 @@
+.main-footer {
+  padding: 22px 50px;
+  background: $white;
+  display: flex;
+  justify-content: space-between;
+
+  .select-wrapper {
+    .selectric-wrapper {
+      .selectric {
+        .label {
+          text-transform: uppercase;
+        }
+      }
+      .selectric-items {
+        text-align: center;
+      }
+    }
+  }
+}
+
+.footer-left {
+  width: 600px;
+}
+
+.footer-right {
+  flex: 1;
+  text-align: right;
+}
+
+.footer-menu {
+  margin-bottom: 16px;
+
+  a {
+    margin: 0 16px;
+
+    &:first-child {
+      margin-left: 0;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+.socials {
+  margin-right: 35px;
+
+  a {
+    margin: 0 15px;
+    font-size: 25px;
+    line-height: 25px;
+
+    &:first-child {
+      margin-left: 0;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}

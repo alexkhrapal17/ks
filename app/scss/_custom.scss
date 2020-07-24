@@ -31,12 +31,95 @@ input[type="number"] {
 input, textarea {
   border-radius: 0;
   -webkit-appearance: none;
-  @include transition(.3s);
+
+  @include input-placeholder {
+    @include transition(.3s);
+  }
 }
 
 label {
   margin: 0;
   user-select: none;
+}
+
+ul {
+  list-style: none;
+
+  li {
+    font-size: 13px;
+    line-height: 16px;
+    color: $east-bay;
+    position: relative;
+    margin-bottom: 5px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &:after {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 6px;
+      left: -15px;
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background: $de-york;
+    }
+  }
+}
+
+ol {
+  li {
+    font-size: 13px;
+    line-height: 16px;
+    color: $east-bay;
+  }
+}
+
+.table-wrapper {
+  border-radius: 13px;
+  overflow: hidden;
+  border: 2px solid $east-bay;
+  max-width: 740px;
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+
+    td, th {
+      font-size: 13px;
+      line-height: 16px;
+      padding: 10px;
+    }
+
+    td {
+      &:first-child {
+        font-weight: $font-bold;
+      }
+    }
+
+    thead {
+      background: $east-bay;
+      color: $white;
+    }
+
+    tbody {
+      tr {
+        border-bottom: 2px solid $east-bay;
+        @include transition(.3s);
+
+        &:hover {
+          background: $cream-can;
+        }
+
+        &:last-child {
+          border-bottom: none;
+        }
+      }
+    }
+  }
 }
 
 *::-webkit-scrollbar {
@@ -84,7 +167,10 @@ main {
   align-items: center;
   position: relative;
 
-  &.red-heading {
+  &.red-heading,
+  &.green-heading,
+  &.yellow-heading,
+  &.dark-heading {
     &:before {
       content: '';
       display: block;
@@ -93,7 +179,30 @@ main {
       right: calc(100% + 10px);
       width: 160px;
       height: 87px;
+    }
+  }
+
+  &.red-heading {
+    &:before {
       background: url("../img/heading-red.svg") no-repeat 50% 50%;
+    }
+  }
+
+  &.green-heading {
+    &:before {
+      background: url("../img/heading-green.svg") no-repeat 50% 50%;
+    }
+  }
+
+  &.yellow-heading {
+    &:before {
+      background: url("../img/heading-yellow.svg") no-repeat 50% 50%;
+    }
+  }
+
+  &.dark-heading {
+    &:before {
+      background: url("../img/heading-dark.svg") no-repeat 50% 50%;
     }
   }
 }
@@ -346,6 +455,15 @@ main {
   position: relative;
   cursor: pointer;
   user-select: none;
+
+  &.dropdown-top {
+    .selectric-wrapper {
+      .selectric-items {
+        top: auto;
+        bottom: calc(100% + 10px);
+      }
+    }
+  }
 
   .mdi {
     position: absolute;
