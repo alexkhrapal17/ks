@@ -50,7 +50,7 @@
 }
 
 @mixin desktop {
-  @media (max-width: $screen-md) { @content; }
+  @media (max-width: $screen-lg) { @content; }
 }
 
 @mixin tablet {

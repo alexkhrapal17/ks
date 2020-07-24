@@ -14,6 +14,10 @@ body {
   flex-direction: column;
   justify-content: space-between;
   min-height: 100vh;
+
+  &.o-hidden {
+    overflow: hidden;
+  }
 }
 
 input[type="number"]::-webkit-inner-spin-button,
@@ -160,6 +164,10 @@ ol {
 main {
   flex: 1;
   margin-top: 110px;
+
+  @include tablet {
+    margin-top: 72px;
+  }
 }
 
 .repeat-heading {
@@ -179,6 +187,10 @@ main {
       right: calc(100% + 10px);
       width: 160px;
       height: 87px;
+
+      @include desktop {
+        display: none;
+      }
     }
   }
 
@@ -209,6 +221,10 @@ main {
 
 .outer-wrapper {
   padding: 75px 0;
+
+  @include tablet {
+    padding: 25px 0;
+  }
 }
 
 .inner-wrapper {
@@ -527,6 +543,26 @@ main {
 
 // Checkbox
 .checkbox-wrapper {
+  &.checkbox-green {
+    input {
+      &:checked {
+        + label {
+          color: $de-york;
+        }
+      }
+    }
+
+    label {
+      .check-icon {
+        .mdi {
+          &.checked {
+            color: $de-york;
+          }
+        }
+      }
+    }
+  }
+
   input {
     display: none;
 
@@ -552,6 +588,7 @@ main {
   label {
     display: flex;
     cursor: pointer;
+    @include transition(.3s);
 
     .check-icon {
       margin-right: 10px;
@@ -611,8 +648,14 @@ main {
 
 // Sliders
 .hero-slider {
+  .swiper-slide {
+    img {
+      border-radius: 13px;
+    }
+  }
+
   .swiper-pagination {
-    bottom: -45px;
+    bottom: -60px;
 
     .swiper-pagination-bullet {
       width: 16px;

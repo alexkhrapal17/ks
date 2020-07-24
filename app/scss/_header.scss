@@ -13,6 +13,15 @@
   justify-content: space-between;
   @include transition(.2s);
 
+  @media (max-width: 1600px) {
+    padding: 20px 16px;
+  }
+
+  @include tablet {
+    padding: 10px 16px;
+    height: 72px;
+  }
+
   &.is-hidden {
     transform: translateY(-100%);
   }
@@ -30,6 +39,14 @@
 .logo {
   margin-right: 32px;
 
+  @media (max-width: 1500px) {
+    margin-right: 15px;
+  }
+
+  @include tablet {
+    width: 90px;
+  }
+
   a {
     display: block;
   }
@@ -37,6 +54,10 @@
 
 .header-sm-menu {
   margin-bottom: 10px;
+
+  @include tablet {
+    display: none;
+  }
 
   a {
     margin: 0 16px;
@@ -52,6 +73,32 @@
 }
 
 .main-nav {
+  @include tablet {
+    transform: translateX(100%);
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    background: $white;
+    height: calc(100vh - 130px);
+    padding: 20px 16px 100px;
+    @include transition(.3s);
+
+    &.show {
+      opacity: 1;
+      visibility: visible;
+      transform: translateX(0);
+    }
+
+    &.o-hidden {
+      overflow: hidden;
+    }
+  }
+
   ul {
     padding: 0;
     margin: 0;
@@ -59,10 +106,41 @@
     display: flex;
     align-items: center;
 
+    @include tablet {
+      display: block;
+    }
+
     li {
       cursor: pointer;
       position: relative;
       margin-right: 20px;
+      margin-bottom: 0;
+
+      @media (max-width: 1500px) {
+        margin-right: 10px;
+      }
+
+      @include tablet {
+        margin-right: 0;
+        margin-bottom: 25px;
+        position: static;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+
+      .title {
+        @media (max-width: 1600px) {
+          font-size: 14px;
+          line-height: 16px;
+        }
+
+        @include tablet {
+          font-size: 18px;
+          line-height: 22px;
+        }
+      }
 
       &:after {
         display: none;
@@ -75,6 +153,10 @@
       &:hover {
         .mdi {
           transform: rotate(180deg);
+
+          @include tablet {
+            transform: rotate(-90deg);
+          }
         }
 
         .dropdown {
@@ -89,18 +171,79 @@
         font-size: 20px;
         line-height: 20px;
         @include transition(.3s);
+
+        @media (max-width: 1500px) {
+          position: relative;
+          top: 2px;
+        }
+
+        @include tablet {
+          transform: rotate(-90deg);
+          top: 1px;
+        }
       }
 
       .dropdown {
         min-width: 255px;
         max-height: 330px;
         overflow: auto;
+
+        @include tablet {
+          transform: translateX(100%);
+          top: 0;
+          width: 100%;
+          height: 100%;
+          max-height: initial;
+          z-index: 10;
+          box-shadow: none;
+          padding-left: 48px;
+
+          &.show {
+            opacity: 1;
+            visibility: visible;
+            transform: translateX(0);
+          }
+        }
       }
     }
   }
 }
 
+.mobile-back {
+  display: none;
+
+  @include tablet {
+    display: block;
+    position: absolute;
+    top: 7px;
+    left: 14px;
+    width: 34px;
+    height: 44px;
+    text-align: center;
+
+    .mdi {
+      line-height: 44px !important;
+    }
+  }
+}
+
+.header-footer-block, .header-links {
+  display: none !important;
+
+  @include tablet {
+    display: flex !important;
+  }
+}
+
+.header-links {
+  margin: 70px -16px;
+}
+
 .site-settings {
+  @include desktop {
+    display: none;
+  }
+
   .select-wrapper {
     .selectric-wrapper {
       .selectric {
@@ -119,18 +262,31 @@
   margin-left: 32px;
   font-feature-settings: 'tnum' on, 'lnum' on;
 
+  @media (max-width: 1500px) {
+    margin-left: 15px;
+  }
+
   a {
     display: flex;
     align-items: center;
 
     img {
       margin-right: 8px;
+
+      @include tablet {
+        width: 16px;
+        height: 16px;
+      }
     }
   }
 }
 
 .callback {
   margin-left: 32px;
+
+  @media (max-width: 1500px) {
+    display: none;
+  }
 }
 
 .header-actions {
@@ -138,11 +294,23 @@
   align-items: center;
   margin-left: 32px;
 
+  @media (max-width: 1500px) {
+    margin-left: 15px;
+  }
+
+  @include tablet {
+    display: none;
+  }
+
   .action-item {
     margin: 0 16px;
     position: relative;
     cursor: pointer;
     @include transition(.2s);
+
+    @media (max-width: 1500px) {
+      margin: 0 5px;
+    }
 
     &:hover {
       opacity: .8;
@@ -187,6 +355,10 @@
   z-index: 10;
   @include transition(.4s);
 
+  @media (max-width: 1400px) {
+    padding: 20px 16px;
+  }
+
   &.show {
     transform: translateY(0);
   }
@@ -209,6 +381,17 @@
   }
 }
 
+.mobile-close-search {
+  display: none;
+  font-size: 23px;
+  line-height: 23px;
+  margin-right: 10px;
+
+  @include tablet {
+    display: block;
+  }
+}
+
 .search-input {
   flex: 1;
 
@@ -220,6 +403,11 @@
     opacity: 1;
     @extend .title;
     @extend .title.is-2;
+
+    @include tablet {
+      font-size: 13px;
+      line-height: 16px;
+    }
 
     @include input-placeholder {
       color: $east-bay;
@@ -234,6 +422,74 @@
 
   .select-wrapper {
     margin-left: 60px;
+
+    @media (max-width: 1400px) {
+      margin-left: 20px;
+    }
+  }
+}
+
+.search-settings-mobile {
+  display: flex;
+  align-items: center;
+
+  @include tablet {
+    position: absolute;
+    display: none;
+    top: 100%;
+    right: 0;
+    left: 0;
+    width: 100%;
+    overflow: auto;
+    background: $white;
+    padding: 40px 20px;
+    height: calc(100vh - 130px);
+    border-top: 2px solid rgba($east-bay, .33);
+
+    &.show {
+      display: block;
+    }
+
+    .select-wrapper {
+      display: none;
+    }
+
+    .checkbox-wrapper {
+      .check-icon {
+        top: 2px;
+      }
+
+      p {
+        text-transform: uppercase;
+        font-size: 18px;
+        line-height: 22px;
+      }
+    }
+  }
+
+  .select-categories-mobile {
+    display: none;
+
+    @include tablet {
+      display: block;
+      margin-top: 50px;
+    }
+
+    .checkbox-wrapper {
+      margin-bottom: 30px;
+    }
+  }
+}
+
+.mobile-search-options-toggle {
+  display: none;
+  font-size: 30px;
+  line-height: 30px;
+
+  @include tablet {
+    display: block;
+    width: 40px;
+    text-align: right;
   }
 }
 
@@ -245,11 +501,41 @@
 
 .button-search {
   margin-left: 65px;
+
+  @media (max-width: 1400px) {
+    margin-left: 20px;
+  }
+
+  @include tablet {
+    margin-left: 10px;
+
+    button {
+      font-size: 0;
+      padding: 7px;
+
+      .mdi {
+        margin: 0;
+        font-size: 30px;
+        line-height: 30px;
+        position: relative;
+        left: 1px;
+        top: 1px;
+      }
+    }
+  }
 }
 
 .close-search {
   margin-left: 55px;
   cursor: pointer;
+
+  @media (max-width: 1400px) {
+    margin-left: 20px;
+  }
+
+  @include tablet {
+    display: none;
+  }
 
   .mdi {
     font-size: 23px;
@@ -264,15 +550,23 @@
   right: 0;
   z-index: 10;
   width: 455px;
-  height: 100vh;
+  height: calc(100vh - 100px);
   background: $white;
   border-radius: 13px 0 0 13px;
   padding: 95px 0 32px;
   box-shadow: $shadow;
   opacity: 0;
+  overflow: auto;
   visibility: hidden;
   transform: translateX(100%);
   @include transition(.4s);
+
+  @include phone {
+    width: 100%;
+    padding: 50px 16px 75px;
+    border-radius: 0;
+    height: calc(100vh - 60px);
+  }
 
   &.show {
     opacity: 1;
@@ -287,12 +581,22 @@
     cursor: pointer;
     font-size: 30px;
     line-height: 30px;
+
+    @include phone {
+      top: 10px;
+      right: 10px;
+    }
   }
 
   .total-price {
     display: flex;
     justify-content: flex-end;
     padding: 32px 32px 0;
+
+    @include phone {
+      padding: 10px 0;
+      margin-top: 30px;
+    }
 
     .order-button {
       width: 250px;
@@ -321,6 +625,15 @@
   height: calc(100vh - 260px);
   overflow: auto;
   padding: 0 32px;
+
+  @include tablet {
+    height: calc(100vh - 320px);
+  }
+
+  @include phone {
+    padding: 0;
+    height: auto;
+  }
 }
 
 .basket-item {
@@ -346,6 +659,11 @@
 
     .title.is-3 {
       min-height: 50px;
+
+      @include phone {
+        font-size: 18px;
+        line-height: 22px;
+      }
     }
   }
 }
@@ -382,5 +700,95 @@
         color: $east-bay;
       }
     }
+  }
+}
+
+// Mobile menu
+.mobile-menu {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 72px;
+  background: $white;
+  box-shadow: $shadow;
+  z-index: 10000;
+  padding: 20px;
+  border-radius: 13px 13px 0 0;
+
+  @include tablet {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .mobile-menu-item {
+    position: relative;
+
+    &.categories-toggle {
+      &.active {
+        svg {
+          path {
+            fill: $de-york;
+            stroke: transparent;
+          }
+        }
+      }
+    }
+
+    &.active {
+      svg {
+        path {
+          fill: $de-york;
+          stroke: $de-york;
+        }
+      }
+    }
+
+    svg {
+      path {
+        @include transition(.3s);
+      }
+    }
+
+    &.notification {
+      &:after {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: $burnt-sienna;
+      }
+    }
+  }
+}
+
+.header-mobile-categories {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: calc(100vh - 130px);
+  background: $white;
+  overflow: auto;
+  padding: 20px 16px 75px;
+  transform: translateX(100%);
+  opacity: 0;
+  visibility: hidden;
+  @include transition(.3s);
+
+  &.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0);
+  }
+
+  @include tablet {
+    display: block;
   }
 }
