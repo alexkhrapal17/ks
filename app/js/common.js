@@ -50,6 +50,10 @@ $(function() {
         } else if (currentTop - previousTop > scrollDelta && currentTop > scrollOffset) {
             //if scrolling down...
             mainHeader.addClass('is-hidden');
+            $('.header-search').removeClass('show');
+            $('.search-mask').removeClass('show');
+            $('.header-basket').removeClass('show');
+            $('.basket-mask').removeClass('show');
         }
     }
 
@@ -88,4 +92,73 @@ $(function() {
         }
     }
 
+
+    // Selects
+    $('.select-lang').selectric();
+    $('.select-currency').selectric();
+    $('.select-category').selectric();
+
+
+    // Search toggle
+    $('.search-toggle').on('click', function () {
+        $('.header-search').addClass('show');
+        $('.search-mask').addClass('show');
+    });
+    $('.close-search').on('click', function () {
+        $('.header-search').removeClass('show');
+        $('.search-mask').removeClass('show');
+    });
+    $('.search-mask').on('click', function () {
+        $('.header-search').removeClass('show');
+        $('.search-mask').removeClass('show');
+    });
+
+
+    // Basket toggle
+    $('.basket-toggle').on('click', function () {
+        $('.header-basket').addClass('show');
+        $('.basket-mask').addClass('show');
+    });
+    $('.close-basket').on('click', function () {
+        $('.header-basket').removeClass('show');
+        $('.basket-mask').removeClass('show');
+    });
+    $('.basket-mask').on('click', function () {
+        $(this).removeClass('show');
+        $('.header-basket').removeClass('show');
+    });
+
+
+    // Input counter
+    $('.quantity-arrow-minus').click(function () {
+        let $input = $(this).parent().find('input');
+        let count = parseInt($input.val()) - 1;
+        count = count < 1 ? 1 : count;
+        $input.val(count);
+        $input.change();
+        return false;
+    });
+    $('.quantity-arrow-plus').click(function () {
+        let $input = $(this).parent().find('input');
+        $input.val(parseInt($input.val()) + 1);
+        $input.change();
+        return false;
+    });
+
+    // Sliders
+    let heroSlider = new Swiper('.hero-slider', {
+        loop: true,
+        speed: 700,
+        fadeEffect: {crossFade: true},
+        autoplay: {
+            delay: 3000,
+            disableOnInteraction: true,
+        },
+        slidersPerView: 1,
+        effect: "fade",
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+    });
 });

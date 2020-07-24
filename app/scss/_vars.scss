@@ -2,11 +2,15 @@ $default-font: 'Montserrat', sans-serif;
 
 // Colors
 $white: #FFF;
+$white-hover: #E7E7E7;
 $cornflower-blue: #333;
 $east-bay: #46587A;
+$east-bay-hover: #3A4C6E;
 $burnt-sienna: #EB5757;
+$burnt-sienna-hover: #F34D4D;
 $cream-can: #F2C94C;
 $de-york: #6FCF97;
+$de-york-hover: #40CA7A;
 
 // Font weight
 $font-light: 300;
@@ -15,6 +19,9 @@ $font-medium: 500;
 $font-semi-bold: 600;
 $font-bold: 700;
 $font-extra-bold: 800;
+
+// Box shadow
+$shadow: 0 20px 50px rgba(0, 0, 0, 0.13);
 
 
 // Customization Bootstrap vars from "app/libs/bootstrap/scss/_variables.scss"

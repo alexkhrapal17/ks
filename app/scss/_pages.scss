@@ -1,0 +1,183 @@
+.hero-slider-section {
+  margin-bottom: 80px;
+}
+
+.categories-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -64px;
+}
+
+.category-item {
+  display: block;
+  width: 155px;
+  margin: 32px 64px;
+  text-align: center;
+  padding: 15px;
+  border-radius: 13px;
+  background: $white;
+  cursor: pointer;
+  @include transition(.3s);
+
+  &:hover {
+    box-shadow: $shadow;
+    color: $east-bay;
+
+    .category-icon {
+      img {
+        &.black-icon {
+          opacity: 0;
+          visibility: hidden;
+        }
+
+        &.color-icon {
+          opacity: 1;
+          visibility: visible;
+        }
+      }
+    }
+  }
+
+  .category-icon {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    margin: 0 auto 8px;
+
+    img {
+      @include center(both);
+      @include transition(.3s);
+
+      &.color-icon {
+        opacity: 0;
+        visibility: hidden;
+      }
+    }
+  }
+}
+
+.medical-seeds-title {
+  margin-bottom: 45px;
+}
+
+.medical-seeds-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -55px;
+}
+
+.seed-card {
+  width: 300px;
+  margin: 55px;
+  cursor: pointer;
+  position: relative;
+
+  &:hover {
+    .seed-card-main {
+      &:after {
+        height: 100%;
+        border-radius: 13px;
+      }
+
+      .seed-details {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+      }
+    }
+  }
+
+  .seed-card-like {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: $white;
+    position: absolute;
+    top: -50px;
+    right: -50px;
+    z-index: 12;
+    box-shadow: $shadow;
+
+    img {
+      max-width: 100%;
+      @include center(both);
+    }
+  }
+
+  .seed-card-main {
+    margin-bottom: 16px;
+    border-radius: 13px;
+    height: 370px;
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-position: top center;
+    background-repeat: no-repeat;
+    position: relative;
+    overflow: hidden;
+
+    &:after {
+      content: '';
+      display: block;
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      height: 90px;
+      border-radius: 0 0 13px 13px;
+      background: rgba($white, 0.01);
+      backdrop-filter: blur(33px);
+      will-change: height;
+      @include transition(.4s);
+    }
+
+    .seed-card-bottom {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1;
+      padding: 20px;
+      border-radius: 0 0 13px 13px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      min-height: 90px;
+    }
+
+    .seed-details {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: calc(100% - 90px);
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      z-index: 1;
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(20px);
+      @include transition(.4s);
+
+      .seed-details-row {
+        display: flex;
+        margin-bottom: 8px;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+
+        .seed-details-label {
+          width: 80px;
+          text-align: right;
+          margin-right: 10px;
+        }
+
+        .seed-details-text {
+          flex: 1;
+        }
+      }
+    }
+  }
+}

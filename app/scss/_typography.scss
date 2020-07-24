@@ -1,4 +1,5 @@
 .title {
+  display: inline-block;
   font-weight: $font-bold;
   margin: 0;
 
@@ -30,7 +31,11 @@ p {
 }
 
 a {
+  color: $east-bay;
+  @include transition(.2s);
+
   &:hover {
+    color: $burnt-sienna;
     text-decoration: none;
   }
 }
@@ -54,6 +59,10 @@ img {
 
 .text-right {
   text-align: right;
+}
+
+.text-center {
+  text-align: center;
 }
 
 // Fonts
