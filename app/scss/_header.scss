@@ -39,7 +39,7 @@
 .logo {
   margin-right: 32px;
 
-  @media (max-width: 1500px) {
+  @media (max-width: 1600px) {
     margin-right: 15px;
   }
 
@@ -84,8 +84,8 @@
     overflow-x: hidden;
     overflow-y: auto;
     background: $white;
-    height: calc(100vh - 130px);
-    padding: 20px 16px 100px;
+    height: calc(100vh + 20px);
+    padding: 20px 16px 150px;
     @include transition(.3s);
 
     &.show {
@@ -116,7 +116,7 @@
       margin-right: 20px;
       margin-bottom: 0;
 
-      @media (max-width: 1500px) {
+      @media (max-width: 1600px) {
         margin-right: 10px;
       }
 
@@ -179,7 +179,8 @@
 
         @include tablet {
           transform: rotate(-90deg);
-          top: 1px;
+          top: 4px;
+          font-size: 30px;
         }
       }
 
@@ -215,8 +216,8 @@
   @include tablet {
     display: block;
     position: absolute;
-    top: 7px;
-    left: 14px;
+    top: 4px;
+    left: 10px;
     width: 34px;
     height: 44px;
     text-align: center;
@@ -246,6 +247,8 @@
 
   .select-wrapper {
     .selectric-wrapper {
+      width: 60px;
+
       .selectric {
         .label {
           text-transform: uppercase;
@@ -294,7 +297,7 @@
   align-items: center;
   margin-left: 32px;
 
-  @media (max-width: 1500px) {
+  @media (max-width: 1600px) {
     margin-left: 15px;
   }
 
@@ -308,7 +311,7 @@
     cursor: pointer;
     @include transition(.2s);
 
-    @media (max-width: 1500px) {
+    @media (max-width: 1600px) {
       margin: 0 5px;
     }
 
@@ -357,6 +360,11 @@
 
   @media (max-width: 1400px) {
     padding: 20px 16px;
+  }
+
+  @include tablet {
+    transform: translateY(100%);
+    border-radius: 13px 13px 0 0;
   }
 
   &.show {
@@ -436,15 +444,14 @@
   @include tablet {
     position: absolute;
     display: none;
-    top: 100%;
+    bottom: calc(100% + 72px);
     right: 0;
     left: 0;
     width: 100%;
     overflow: auto;
     background: $white;
-    padding: 40px 20px;
+    padding: calc(40px + 70px) 20px 20px;
     height: calc(100vh - 130px);
-    border-top: 2px solid rgba($east-bay, .33);
 
     &.show {
       display: block;
@@ -455,14 +462,32 @@
     }
 
     .checkbox-wrapper {
-      .check-icon {
-        top: 2px;
-      }
-
       p {
         text-transform: uppercase;
-        font-size: 18px;
-        line-height: 22px;
+      }
+
+      &.search-in-desc {
+        position: fixed;
+        top: -45px;
+        left: 16px;
+        right: 16px;
+
+        label {
+          justify-content: center;
+        }
+
+        .check-icon {
+          top: 0;
+
+          .mdi {
+            color: $white;
+          }
+        }
+
+        p {
+          text-transform: inherit;
+          color: $white;
+        }
       }
     }
   }
@@ -472,11 +497,10 @@
 
     @include tablet {
       display: block;
-      margin-top: 50px;
     }
 
     .checkbox-wrapper {
-      margin-bottom: 30px;
+      margin-bottom: 20px;
     }
   }
 }
@@ -485,6 +509,16 @@
   display: none;
   font-size: 30px;
   line-height: 30px;
+
+  .mdi {
+    @include transition(.3s);
+  }
+
+  &.active {
+    .mdi {
+      color: $burnt-sienna;
+    }
+  }
 
   @include tablet {
     display: block;
@@ -550,7 +584,7 @@
   right: 0;
   z-index: 10;
   width: 455px;
-  height: calc(100vh - 100px);
+  height: 100vh;
   background: $white;
   border-radius: 13px 0 0 13px;
   padding: 95px 0 32px;
@@ -563,9 +597,9 @@
 
   @include phone {
     width: 100%;
-    padding: 50px 16px 75px;
+    padding: 50px 16px 160px;
     border-radius: 0;
-    height: calc(100vh - 60px);
+    height: calc(100vh + 20px);
   }
 
   &.show {
@@ -622,7 +656,7 @@
 }
 
 .basket-products-list {
-  height: calc(100vh - 260px);
+  height: calc(100vh - 265px);
   overflow: auto;
   padding: 0 32px;
 
@@ -718,8 +752,7 @@
   border-radius: 13px 13px 0 0;
 
   @include tablet {
-    display: flex;
-    justify-content: space-between;
+    display: block;
   }
 
   .mobile-menu-item {
@@ -773,7 +806,7 @@
   top: 100%;
   left: 0;
   width: 100%;
-  height: calc(100vh - 130px);
+  height: calc(100vh + 150px);
   background: $white;
   overflow: auto;
   padding: 20px 16px 75px;
@@ -787,6 +820,20 @@
     visibility: visible;
     transform: translateX(0);
   }
+
+  @include tablet {
+    display: block;
+  }
+}
+
+.desktop-search {
+  @include tablet {
+    display: none;
+  }
+}
+
+.tablet-search {
+  display: none;
 
   @include tablet {
     display: block;

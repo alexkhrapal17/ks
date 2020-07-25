@@ -2,7 +2,7 @@
 .hero-slider-section {
   margin-bottom: 80px;
 
-  @media (max-width: 1500px) {
+  @media (max-width: 1600px) {
     margin-bottom: 0;
   }
 
@@ -109,6 +109,16 @@
 
 .medical-seeds-title {
   margin-bottom: 45px;
+
+  @include phone {
+    margin-bottom: 25px;
+  }
+}
+
+.tasty-title, .effect-title {
+  @include phone {
+    margin: 0 !important;
+  }
 }
 
 .medical-seeds-wrapper {
@@ -151,7 +161,7 @@
 
   @include phone {
     width: 100%;
-    margin: 0 0 32px;
+    margin: 0 0 50px;
   }
 
   &:hover {
@@ -212,6 +222,10 @@
     position: relative;
     overflow: hidden;
 
+    @include phone {
+      height: 300px;
+    }
+
     &:after {
       content: '';
       display: block;
@@ -269,7 +283,7 @@
 
   @include desktop {
     display: block;
-    margin-top: 16px;
+    margin-top: 40px;
   }
 }
 
@@ -539,6 +553,10 @@
   align-items: center;
   margin-bottom: 64px;
 
+  @include phone {
+    margin-bottom: 32px;
+  }
+
   .media-icon {
     position: relative;
     margin-right: 15px;
@@ -602,11 +620,20 @@
   flex-wrap: wrap;
   margin-bottom: 32px;
 
+  @include phone {
+    justify-content: space-between;
+  }
+
   img {
     display: block;
     margin: 0 32px;
     filter: grayscale(100%);
     @include transition(.3s);
+
+    @include phone {
+      margin: 16px;
+      height: 32px;
+    }
 
     &:hover {
       filter: grayscale(0);

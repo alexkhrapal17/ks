@@ -175,6 +175,20 @@ main {
   align-items: center;
   position: relative;
 
+  .title {
+    @include phone {
+      font-size: 18px;
+      line-height: 22px;
+    }
+  }
+
+  img {
+    @include phone {
+      width: 64px;
+      height: 64px;
+    }
+  }
+
   &.red-heading,
   &.green-heading,
   &.yellow-heading,
@@ -188,7 +202,7 @@ main {
       width: 160px;
       height: 87px;
 
-      @include desktop {
+      @media (max-width: 1600px) {
         display: none;
       }
     }
@@ -498,6 +512,7 @@ main {
         transform: rotate(180deg);
       }
     }
+
     .selectric {
       background: none;
       border: none;

@@ -1,4 +1,4 @@
-$(function() {
+$(function () {
 
     // Fixed header
     let mainHeader = $('.main-header'),
@@ -50,11 +50,11 @@ $(function() {
         } else if (currentTop - previousTop > scrollDelta && currentTop > scrollOffset) {
             //if scrolling down...
             mainHeader.addClass('is-hidden');
-            $('.header-search').removeClass('show');
+            /*$('.header-search').removeClass('show');
             $('.search-mask').removeClass('show');
             $('.header-basket').removeClass('show');
             $('.basket-mask').removeClass('show');
-            $('body').removeClass('o-hidden');
+            $('body').removeClass('o-hidden');*/
         }
     }
 
@@ -108,6 +108,7 @@ $(function() {
         $('.main-header').removeClass('is-hidden');
 
         $('.search-settings-mobile').removeClass('show');
+        $('.mobile-search-options-toggle').removeClass('active');
 
         $('body').toggleClass('o-hidden');
 
@@ -128,12 +129,16 @@ $(function() {
         $('.header-search').removeClass('show');
         $('.search-mask').removeClass('show');
         $('.search-toggle').removeClass('active');
+        $('.search-settings-mobile').removeClass('show');
+        $('.mobile-search-options-toggle').removeClass('active');
         $('body').removeClass('o-hidden');
     });
     $('.search-mask').on('click', function () {
         $('.header-search').removeClass('show');
         $('.search-mask').removeClass('show');
         $('.search-toggle').removeClass('active');
+        $('.search-settings-mobile').removeClass('show');
+        $('.mobile-search-options-toggle').removeClass('active');
         $('body').removeClass('o-hidden');
     });
     $('.mobile-close-search').on('click', function () {
@@ -182,7 +187,8 @@ $(function() {
 
     // Search mobile
     $('.mobile-search-options-toggle').on('click', function () {
-       $('.search-settings-mobile').toggleClass('show');
+        $('.mobile-search-options-toggle').toggleClass('active');
+        $('.search-settings-mobile').toggleClass('show');
     });
 
 
