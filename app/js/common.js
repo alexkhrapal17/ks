@@ -98,6 +98,17 @@ $(function () {
     $('.select-lang').selectric();
     $('.select-currency').selectric();
     $('.select-category').selectric();
+    $('.sort-by-select').selectric();
+    $('.for-show').selectric();
+
+    $(".js-range-slider").ionRangeSlider({
+        type: "double",
+        min: 0,
+        max: 1000,
+        from: 200,
+        to: 500,
+        hide_min_max: true
+    });
 
 
     // Search toggle
@@ -280,5 +291,13 @@ $(function () {
         // hide menu if open
         $('.main-nav').removeClass('show');
         $('.mobile-nav-toggle').removeClass('active');
+    });
+
+
+    // Filter mobile toggle
+    $('.filter-toggle').on('click', function () {
+        $(this).toggleClass('active');
+        $('body').toggleClass('o-hidden');
+        $('.filters-wrapper').toggleClass('show');
     });
 });

@@ -2,6 +2,7 @@
   display: inline-block;
   font-weight: $font-bold;
   margin: 0;
+  word-break: break-word;
 
   &.is-1 {
     font-size: 36px;

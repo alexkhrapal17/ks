@@ -164,6 +164,80 @@
     margin: 0 0 50px;
   }
 
+  &.seed-card-sm {
+    &:hover {
+      .seed-card-main {
+        &:after {
+          @include desktop {
+            height: 70px;
+          }
+        }
+      }
+    }
+    .seed-card-like {
+      width: 50px;
+      height: 50px;
+      top: -25px;
+      right: -25px;
+
+      @media (max-width: 1600px) {
+        top: 0;
+        right: 0;
+      }
+
+      img {
+        height: 32px;
+      }
+    }
+
+    .seed-card-main {
+      height: 280px;
+      margin-bottom: 32px;
+      overflow: initial;
+
+      @include phone {
+        height: 220px;
+      }
+
+      &:after {
+        height: 70px;
+      }
+
+      .seed-details {
+        padding: 5px;
+        height: calc(100% - 40px);
+      }
+
+      .seed-card-bottom {
+        padding: 15px;
+        display: block;
+        text-align: center;
+        height: 70px;
+        min-height: initial;
+
+        .btn {
+          position: relative;
+          bottom: -10px;
+        }
+      }
+    }
+
+    .for-mobile {
+      margin-top: 20px;
+    }
+
+    .seed-details-row {
+      display: block;
+      text-align: center;
+      
+      .seed-details-label {
+        width: auto;
+        text-align: center;
+        margin-right: 0;
+      }
+    }
+  }
+
   &:hover {
     .seed-card-main {
       &:after {
@@ -635,6 +709,10 @@
       height: 32px;
     }
 
+    @media (max-width: 374px) {
+      margin: 16px 8px;
+    }
+
     &:hover {
       filter: grayscale(0);
     }
@@ -653,6 +731,193 @@
     @include phone {
       font-size: 13px;
       line-height: 16px;
+    }
+  }
+}
+
+// Category page
+.category-wrapper {
+  display: flex;
+}
+
+.filters-wrapper {
+  width: 370px;
+  margin-right: 40px;
+
+  @include tablet {
+    opacity: 0;
+    visibility: hidden;
+    position: fixed;
+    top: 72px;
+    left: 0;
+    width: 100%;
+    overflow: auto;
+    height: calc(100vh - 135px);
+    z-index: 100;
+    padding: 16px 16px 120px;
+    background: $white;
+    @include transition(.3s);
+
+    &.show {
+      opacity: 1;
+      visibility: visible;
+      transform: translateX(0);
+    }
+  }
+}
+
+.filter-toggle {
+  display: none;
+
+  @include tablet {
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 72px;
+    background: $white;
+    box-shadow: $shadow;
+    z-index: 10;
+    padding: 14px 16px;
+    border-radius: 0 0 13px 13px;
+
+    &.active {
+      img {
+        &.before-open {
+          display: none;
+        }
+
+        &.after-open {
+          display: block;
+        }
+      }
+    }
+
+    img {
+      margin-right: 18px;
+
+      &.after-open {
+        display: none;
+      }
+    }
+
+    .title {
+      flex: 1;
+      text-align: right;
+    }
+  }
+}
+
+.filter-price {
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.filter-block {
+  padding: 17px 16px;
+  border: 2px solid $east-bay;
+  margin-bottom: 20px;
+  border-radius: 13px;
+
+  .title {
+    display: block;
+    cursor: pointer;
+    position: relative;
+    user-select: none;
+
+    &[aria-expanded="true"] {
+      .mdi {
+        transform: rotate(180deg);
+      }
+    }
+
+    .mdi {
+      position: absolute;
+      top: 2px;
+      right: 0;
+      font-size: 20px;
+      line-height: 20px;
+      color: $burnt-sienna;
+      @include transition(.3s);
+    }
+  }
+}
+
+.filter-checkboxes-list {
+  margin-top: 25px;
+
+  .checkbox-wrapper {
+    margin-bottom: 25px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.reset-filters {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+
+  @include tablet {
+    justify-content: center;
+    margin: 30px 0 0;
+  }
+
+  &:hover {
+    .title {
+      color: $burnt-sienna;
+    }
+  }
+
+  .title {
+    @include transition(.3s);
+  }
+
+  .mdi {
+    font-size: 20px;
+    line-height: 20px;
+    color: $burnt-sienna;
+    margin-right: 10px;
+  }
+}
+
+.category-content {
+  flex: 1;
+}
+
+.category-results {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -38px;
+
+  @media (max-width: 1600px) {
+    margin: 0 -16px;
+  }
+
+  @media (max-width: 1400px) {
+    margin: 0 -8px;
+  }
+
+  .seed-card {
+    margin: 0 38px 40px;
+    width: calc(25% - 76px);
+
+    @media (max-width: 1600px) {
+      margin: 0 16px 40px;
+      width: calc(25% - 32px);
+    }
+
+    @media (max-width: 1400px) {
+      margin: 0 8px 40px;
+      width: calc(33.33% - 16px);
+    }
+
+    @include desktop {
+      width: calc(50% - 16px);
     }
   }
 }
