@@ -797,6 +797,16 @@ main {
   }
 }
 
+.pagination-center {
+  display: block;
+  justify-content: center;
+  margin-top: 40px;
+
+  @include phone {
+    margin-top: 0;
+  }
+}
+
 .pagination {
   display: flex;
   align-items: center;
@@ -820,7 +830,7 @@ main {
     text-align: center;
     @include transition(.3s);
 
-    @include phone {
+    @media (max-width: 374px) {
       width: 30px;
       height: 30px;
       line-height: 30px;
