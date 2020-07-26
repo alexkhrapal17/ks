@@ -1036,3 +1036,63 @@
     }
   }
 }
+
+// Contacts
+.contacts-wrapper {
+  max-width: 728px;
+  margin: 0 auto 67px;
+
+  @include phone {
+    margin-bottom: 0;
+  }
+}
+
+.contact-link {
+  display: block;
+  font-size: 13px;
+  line-height: 22px;
+}
+
+.contact-icon {
+  font-size: 30px;
+  line-height: 30px;
+  color: $burnt-sienna;
+  margin-right: 20px;
+}
+
+.social-chat-link {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  .mdi {
+    font-size: 23px;
+    line-height: 23px;
+    color: $east-bay;
+    margin-right: 10px;
+  }
+
+  img {
+    margin-right: 11px;
+    margin-left: 2px;
+  }
+}
+
+.write-us-form {
+  margin-bottom: 80px;
+
+  @include phone {
+    margin-bottom: 48px;
+  }
+}
+
+.contact-col {
+  @include phone {
+    max-width: 230px;
+    margin: 0 auto 64px;
+  }
+}

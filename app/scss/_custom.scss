@@ -82,10 +82,29 @@ ul {
 }
 
 ol {
+  counter-reset: counter;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+
   li {
     font-size: 13px;
     line-height: 16px;
     color: $east-bay;
+    counter-increment: counter;
+    margin-bottom: 16px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &:before {
+      content: counter(counter) " ";
+      color: $de-york;
+      font-weight: $font-bold;
+      font-size: 18px;
+      line-height: 22px;
+    }
   }
 }
 
@@ -252,6 +271,12 @@ main {
   max-width: 1612px;
   margin: 0 auto;
   padding: 0 16px;
+  position: relative;
+}
+
+.container-text {
+  max-width: 1190px;
+  margin: 0 auto;
   position: relative;
 }
 
@@ -798,7 +823,7 @@ main {
 }
 
 .pagination-center {
-  display: block;
+  display: flex;
   justify-content: center;
   margin-top: 40px;
 
@@ -902,5 +927,70 @@ main {
     line-height: 16px;
     color: $east-bay;
     font-weight: $font-bold;
+  }
+}
+
+// Form
+.form-wrapper {
+  max-width: 632px;
+  margin: 0 auto;
+
+  .title {
+    @include phone {
+      display: block;
+      text-align: center;
+    }
+  }
+}
+
+.input-wrap {
+  margin-bottom: 32px;
+  position: relative;
+
+  &.error {
+    .input-error {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    input, textarea {
+      border-color: $burnt-sienna;
+      color: $burnt-sienna;
+
+      @include input-placeholder {
+        color: $burnt-sienna;
+      }
+    }
+  }
+
+  input, textarea {
+    display: block;
+    width: 100%;
+    height: 48px;
+    border-radius: 8px;
+    border: 2px solid $east-bay;
+    padding: 13px 20px;
+    font-size: 13px;
+    line-height: 16px;
+    font-weight: $font-bold;
+    color: $east-bay;
+
+    @include input-placeholder {
+      color: $east-bay;
+    }
+  }
+  
+  textarea {
+    height: 142px;
+    resize: none;
+  }
+
+  .input-error {
+    position: absolute;
+    top: calc(100% + 5px);
+    left: 0;
+    opacity: 0;
+    visibility: hidden;
+    @include transition(.3s);
   }
 }
