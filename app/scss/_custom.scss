@@ -187,6 +187,27 @@ ol {
   opacity: 0;
 }
 
+.video-sm {
+  max-width: 560px;
+  margin: 0 auto;
+}
+
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  padding-top: 30px;
+  height: 0;
+  overflow: hidden;
+
+  iframe, object, embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
 main {
   flex: 1;
   margin-top: 110px;
