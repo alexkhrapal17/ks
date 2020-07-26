@@ -1230,3 +1230,106 @@
     @include transition(.3s);
   }
 }
+
+// Product
+.product-top {
+  display: flex;
+  margin-bottom: 50px;
+
+  @include tablet {
+    flex-wrap: wrap;
+  }
+
+  @include phone {
+    display: block;
+  }
+}
+
+.product-main-info {
+  flex: 1;
+}
+
+.product-advantages {
+  width: 320px;
+  margin-left: 32px;
+
+  @include tablet {
+    width: 100%;
+    margin-left: 0;
+  }
+}
+
+.product-data-row {
+  display: flex;
+  margin-bottom: 16px;
+
+  .product-data-label {
+    width: 130px;
+    margin-right: 10px;
+  }
+
+  .product-data-text {
+    flex: 1;
+  }
+}
+
+.advantages-block {
+  padding: 32px;
+  margin-bottom: 32px;
+  border-radius: 13px;
+  border: 1px solid $east-bay;
+
+  &.warning {
+    border-color: $burnt-sienna;
+  }
+}
+
+.advantage-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  .advantage-icon {
+    width: 48px;
+    height: 48px;
+    margin-right: 10px;
+
+    img {
+      max-width: 100%;
+    }
+  }
+
+  .advantage-text {
+    flex: 1;
+  }
+}
+
+.warning-block {
+  max-width: 540px;
+  margin: 0 auto;
+
+  .advantages-block {
+    @include phone {
+      padding: 16px;
+    }
+
+    .advantage-row {
+      align-items: start;
+
+      .advantage-icon {
+        width: 64px;
+        height: 64px;
+      }
+    }
+  }
+}
+
+.add-review {
+  @include phone {
+    margin-bottom: 70px;
+  }
+}

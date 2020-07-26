@@ -236,6 +236,37 @@ $(function () {
         },
     });
 
+    $('.product-slider-for').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: false,
+        fade: true,
+        asNavFor: '.product-slider-nav'
+    });
+    $('.product-slider-nav').slick({
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        asNavFor: '.product-slider-for',
+        dots: false,
+        focusOnSelect: true,
+        responsive: [
+            {
+                breakpoint: 1200,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1
+                }
+            },
+            {
+                breakpoint: 767,
+                settings: {
+                    slidesToShow: 4,
+                    slidesToScroll: 1
+                }
+            },
+        ]
+    });
+
 
     // Mobile main nav toggle
     $('.mobile-nav-toggle').on('click', function () {

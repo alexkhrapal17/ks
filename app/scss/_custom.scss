@@ -496,7 +496,7 @@ main {
   }
 
   &.btn-sm {
-    padding: 8px;
+    padding: 10px 15px 8px 8px;
 
     img {
       margin-right: 0;
@@ -785,6 +785,128 @@ main {
   }
 }
 
+.product-slider {
+  width: 500px;
+  margin-right: 32px;
+
+  @include desktop {
+    width: 340px;
+  }
+
+  @include tablet {
+    max-width: 340px;
+    margin: 0 auto 32px;
+  }
+
+  @include phone {
+    max-width: initial;
+    width: 100%;
+  }
+
+  .product-slider-for {
+    width: 100%;
+    height: 500px;
+    margin-bottom: 6px;
+
+    @include desktop {
+      height: 340px;
+    }
+
+    @include phone {
+      height: auto;
+    }
+
+    .product-slide-for {
+      width: 100%;
+      height: 100%;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: top center;
+      }
+    }
+  }
+
+  .product-slider-nav {
+    padding: 0 50px;
+
+    @include phone {
+      padding-left: 0;
+    }
+
+    .slick-arrow {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: none;
+      font-size: 0;
+      width: 30px;
+      height: 30px;
+      cursor: pointer;
+      border: none;
+      z-index: 10;
+      padding: 0;
+      text-align: center;
+
+      &:after {
+        display: inline-block;
+        font: normal normal normal 24px/1 "Material Design Icons";
+        font-size: 25px;
+        text-rendering: auto;
+        line-height: 30px;
+        color: $burnt-sienna;
+      }
+
+      &.slick-prev {
+        left: 10px;
+
+        @include phone {
+          display: none !important;
+        }
+
+        &:after {
+          content: "\F0141";
+        }
+      }
+
+      &.slick-next {
+        right: 10px;
+
+        &:after {
+          content: "\F0142";
+        }
+      }
+    }
+
+    .product-slide-nav {
+      width: 90px;
+      height: 90px;
+      margin: 5px;
+      border: 2px solid rgba($east-bay, .33);
+      border-radius: 15px;
+      @include transition(.3s);
+
+      @include phone {
+        height: 64px;
+      }
+
+      &.slick-current {
+        border-color: $de-york;
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: top center;
+        border-radius: 13px;
+      }
+    }
+  }
+}
+
 // Bread crumbs
 .bread-crumbs {
   margin-bottom: 30px;
@@ -1013,5 +1135,53 @@ main {
     opacity: 0;
     visibility: hidden;
     @include transition(.3s);
+  }
+}
+
+// Tabs
+.tabs-wrapper {
+  .nav {
+    border: none;
+    justify-content: center;
+    margin-bottom: 50px;
+
+    li {
+      margin: 0 20px;
+
+      &:after {
+        display: none;
+      }
+
+      a {
+        display: block;
+        font-size: 18px;
+        line-height: 22px;
+        font-weight: $font-bold;
+        color: $east-bay;
+        position: relative;
+        
+        &.active {
+          &:after {
+            opacity: 1;
+            visibility: visible;
+          }
+        }
+
+        &:after {
+          content: '';
+          display: block;
+          position: absolute;
+          top: calc(100% + 10px);
+          left: 0;
+          width: 100%;
+          height: 4px;
+          border-radius: 2px;
+          background: $de-york;
+          opacity: 0;
+          visibility: hidden;
+          @include transition(.3s);
+        }
+      }
+    }
   }
 }

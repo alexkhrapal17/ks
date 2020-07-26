@@ -47,6 +47,7 @@ gulp.task('scripts', function() {
 		'app/libs/jquery/dist/jquery.slim.min.js',
 		'app/libs/bootstrap/js/bootstrap.min.js',
 		'app/libs/rangeslider/ion.rangeSlider.js',
+		'app/libs/slick/slick.js',
 		'app/libs/swiper/swiper.js',
 		'app/libs/selectric/jquery.selectric.js',
 		'app/js/common.js', // Always at the end
