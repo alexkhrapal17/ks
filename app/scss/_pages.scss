@@ -1206,3 +1206,27 @@
 .accordion-body {
   padding-top: 20px;
 }
+
+// 404 error
+.error-text {
+  margin-top: 80px;
+
+  @include phone {
+    margin-top: 50px;
+  }
+}
+
+.back-link {
+  display: flex;
+  align-items: center;
+
+  &:hover {
+    img {
+      transform: translateX(5px);
+    }
+  }
+
+  img {
+    @include transition(.3s);
+  }
+}
