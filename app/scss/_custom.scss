@@ -495,11 +495,23 @@ main {
     margin: -2px 10px 0 0;
   }
 
+  &.min-width-155 {
+    min-width: 155px;
+  }
+
   &.btn-sm {
     padding: 10px 15px 8px 8px;
 
     img {
       margin-right: 0;
+    }
+  }
+
+  &.btn-yellow {
+    background: $cream-can;
+
+    &:hover {
+      background: $cream-can-hover;
     }
   }
 
@@ -1090,6 +1102,16 @@ main {
   margin-bottom: 32px;
   position: relative;
 
+  @include phone {
+    margin-bottom: 16px;
+  }
+
+  &.input-white-wrap {
+    input, textarea {
+      border-color: transparent;
+    }
+  }
+
   &.error {
     .input-error {
       opacity: 1;
@@ -1117,6 +1139,7 @@ main {
     line-height: 16px;
     font-weight: $font-bold;
     color: $east-bay;
+    user-select: none;
 
     @include input-placeholder {
       color: $east-bay;
@@ -1135,6 +1158,88 @@ main {
     opacity: 0;
     visibility: hidden;
     @include transition(.3s);
+
+    @include phone {
+      display: none;
+    }
+  }
+}
+
+.input-label-wrap {
+  display: flex;
+  align-items: center;
+  margin-bottom: 32px;
+
+  @include phone {
+    display: block;
+    margin-bottom: 16px;
+  }
+  
+  &.input-label-wrap-block {
+    display: block;
+    margin-bottom: 24px;
+    
+    label {
+      width: auto;
+      text-align: left;
+      margin-bottom: 8px;
+    }
+  }
+
+  label {
+    width: 100px;
+    text-align: right;
+    font-size: 13px;
+    line-height: 16px;
+    margin-right: 16px;
+
+    @include phone {
+      width: auto;
+      margin-right: 0;
+      margin-bottom: 8px;
+    }
+  }
+
+  .input-wrap {
+    flex: 1;
+    margin-bottom: 0;
+    position: relative;
+
+    .mdi {
+      font-size: 30px;
+      line-height: 30px;
+      position: absolute;
+      top: 9px;
+      left: 17px;
+    }
+
+    input, textarea {
+      font-weight: $font-regular;
+
+      @include input-placeholder {
+        font-weight: $font-regular;
+      }
+    }
+
+    input {
+      padding-left: 60px;
+    }
+  }
+}
+
+.form-inner-pl {
+  padding-left: 116px;
+
+  @include phone {
+    padding-left: 0;
+  }
+}
+
+.callback-off-wrapper {
+  margin-bottom: 32px;
+
+  @include phone {
+    margin-bottom: 16px;
   }
 }
 
@@ -1183,5 +1288,209 @@ main {
         }
       }
     }
+  }
+}
+
+// Modal
+.modal {
+  z-index: 10002;
+}
+.modal-backdrop {
+  z-index: 10001;
+  background: $east-bay;
+
+  &.show {
+    opacity: .73;
+  }
+}
+
+.modal-dialog {
+  max-width: 630px;
+  margin: 30px 16px;
+}
+
+.modal-content {
+  background: none;
+  border: none;
+}
+
+.close-modal {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 30px;
+  line-height: 30px;
+  color: $de-york;
+  cursor: pointer;
+}
+
+.remove-btn {
+  padding: 16px 20px;
+}
+
+.add-media-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 32px;
+}
+
+.add-media-col {
+  margin: 0 16px;
+  border-radius: 8px;
+  border: 2px dashed $white;
+  width: 128px;
+  height: 128px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+  @include transition(.3s);
+
+  &:hover {
+    border-color: $de-york;
+  }
+
+  input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    opacity: 0;
+    cursor: pointer;
+  }
+
+  .add-media-content {
+    text-align: center;
+
+    .mdi {
+      display: block;
+      font-size: 25px;
+      line-height: 25px;
+      color: $white;
+    }
+  }
+}
+
+// Star rating
+.rating-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 32px;
+}
+
+.rating {
+  > {
+    input {
+      display: none;
+    }
+
+    label:before {
+      content: "\F0A74";
+      display: inline-block;
+      font: normal normal normal 24px/1 "Material Design Icons";
+      font-size: 25px;
+      text-rendering: auto;
+      line-height: 30px;
+    }
+
+    label {
+      color: rgba($white, .33);
+      float: right;
+      cursor: pointer;
+      margin: 0 5px;
+      @include transition(.3s);
+    }
+
+    input:checked ~ label {
+      color: $de-york;
+
+      &:before {
+        content: "\F0A73";
+      }
+    }
+  }
+}
+
+// Toast message
+.toast-message {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 10003;
+  width: 370px;
+  padding: 40px;
+  border-radius: 0 0 0 8px;
+  color: $white;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateX(100%);
+  @include transition(.4s);
+
+  @include phone {
+    padding: 16px;
+    width: 100%;
+    border-radius: 0 0 13px 13px;
+    transform: translate(0, -100%);
+  }
+
+  &.show {
+    transform: translateX(0);
+    opacity: 1;
+    visibility: visible;
+
+    @include phone {
+      transform: translate(0, 0);
+    }
+  }
+
+  &.success {
+    background: $de-york;
+  }
+
+  &.error {
+    background: $burnt-sienna;
+  }
+
+  .mdi {
+    font-size: 30px;
+    line-height: 30px;
+    margin-right: 35px;
+
+    @include phone {
+      margin-right: 10px;
+    }
+  }
+}
+
+// Form inner
+.form-inner {
+  max-width: 440px;
+  margin: 0 auto;
+}
+
+.form-inner-title {
+  display: block;
+  text-transform: uppercase;
+  margin-bottom: 32px;
+  text-align: center;
+
+  @include phone {
+    margin-bottom: 16px;
+  }
+}
+
+.forgot-password {
+  margin-bottom: 18px;
+}
+
+.btn-mobile-center {
+  @include phone {
+    text-align: center;
   }
 }

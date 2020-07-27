@@ -575,25 +575,72 @@
 	<!-- Mobile menu End -->
 
 	<main>
-		<div style="max-width: 500px; margin: 70px auto; padding: 0 16px">
-			<ol>
-				<li><a href="index.html">Home</a></li>
-				<li><a href="category.html">Category</a></li>
-				<li><a href="product.html">Product</a></li>
-				<li><a href="seedbank.html">Seedbank</a></li>
-				<li><a href="specials.html">Specials</a></li>
-				<li><a href="reviews.html">Reviews</a></li>
-				<li><a href="contacts.html">Contacts</a></li>
-				<li><a href="opt.html">Opt</a></li>
-				<li><a href="faq.html">FAQ</a></li>
-				<li><a href="404.html">404</a></li>
-				<li><a href="checkout.html">Checkout</a></li>
-				<li><a href="autorization.html">Autorization</a></li>
-				<li><a href="registration.html">Registration</a></li>
-				<li><a href="success.html">Success</a></li>
-				<li><a href="forgot-password.html">Forgot-password</a></li>
-			</ol>
-		</div>
+		<section class="outer-wrapper">
+			<div class="inner-wrapper">
+				<div class="bread-crumbs">
+					<a href="#">СЕМЕНА МАРИХУАНЫ</a>
+					<a href="#">ЛИЧНЫЙ КАБИНЕТ</a>
+					<a href="#">АВТОРИЗАЦИЯ</a>
+				</div>
+
+				<div class="login-wrapper">
+					<div class="row">
+						<div class="col-md-6">
+							<span class="title is-4 mb-16 text-uppercase">Новый пользователь</span>
+							<p class="mb-32">Регистрация</p>
+
+							<p class="mb-16">
+								Создание учетной записи поможет делать следующие покупки быстрее <br>
+								(не надо будет снова вводить адрес и контактную информацию), видеть состояние заказа, а также видеть заказы, сделанные ранее.
+							</p>
+							<p class="mb-50">
+								Вы также сможете накапливать при покупках призовые баллы <br>
+								(на них тоже можно что-то купить), а постоянным покупателям мы предлагаем систему скидок.
+							</p>
+
+							<div class="mb-50 btn-mobile-center">
+								<a href="#" class="btn btn-primary min-width-155">Продолжить</a>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<span class="title is-4 mb-16 text-uppercase">Я уже зарегистрирован</span>
+							<p class="mb-32">Авторизация</p>
+
+							<form>
+								<div class="input-label-wrap input-label-wrap-block">
+									<label for="email">
+										E-Mail
+									</label>
+									<div class="input-wrap">
+										<i class="mdi mdi-at"></i>
+										<input type="email" id="email" placeholder="E-Mail Address">
+										<p class="input-error burnt-sienna">Это поле нужно заполнить</p>
+									</div>
+								</div>
+								<div class="input-label-wrap input-label-wrap-block">
+									<label for="password">
+										Password
+									</label>
+									<div class="input-wrap">
+										<i class="mdi mdi-lastpass"></i>
+										<input type="password" id="password" placeholder="E-Mail Address">
+										<p class="input-error burnt-sienna">Это поле нужно заполнить</p>
+									</div>
+								</div>
+
+								<div class="forgot-password">
+									<a href="#" class="burnt-sienna">Forgot password</a>
+								</div>
+
+								<div class="btn-mobile-center">
+									<button type="submit" class="btn min-width-155">Войти</button>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
 	</main>
 
 	<footer class="main-footer">
@@ -643,6 +690,11 @@
 			</p>
 		</div>
 	</footer>
+
+	<!-- Remove after dev -->
+	<div class="all-pages-link">
+		<a href="links.html" class="btn btn-primary">Все страницы</a>
+	</div>
 
 	<script src="js/scripts.min.js"></script>
 </body>

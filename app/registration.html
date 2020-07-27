@@ -225,10 +225,10 @@
 						<div class="checkbox-wrapper">
 							<input type="checkbox" id="check">
 							<label for="check">
-						<span class="check-icon">
-							<i class="mdi mdi-checkbox-marked-outline checked"></i>
-							<i class="mdi mdi-checkbox-blank-outline not-checked"></i>
-						</span>
+								<span class="check-icon">
+									<i class="mdi mdi-checkbox-marked-outline checked"></i>
+									<i class="mdi mdi-checkbox-blank-outline not-checked"></i>
+								</span>
 								<p class="bold">Искать в описании товара</p>
 							</label>
 						</div>
@@ -575,25 +575,97 @@
 	<!-- Mobile menu End -->
 
 	<main>
-		<div style="max-width: 500px; margin: 70px auto; padding: 0 16px">
-			<ol>
-				<li><a href="index.html">Home</a></li>
-				<li><a href="category.html">Category</a></li>
-				<li><a href="product.html">Product</a></li>
-				<li><a href="seedbank.html">Seedbank</a></li>
-				<li><a href="specials.html">Specials</a></li>
-				<li><a href="reviews.html">Reviews</a></li>
-				<li><a href="contacts.html">Contacts</a></li>
-				<li><a href="opt.html">Opt</a></li>
-				<li><a href="faq.html">FAQ</a></li>
-				<li><a href="404.html">404</a></li>
-				<li><a href="checkout.html">Checkout</a></li>
-				<li><a href="autorization.html">Autorization</a></li>
-				<li><a href="registration.html">Registration</a></li>
-				<li><a href="success.html">Success</a></li>
-				<li><a href="forgot-password.html">Forgot-password</a></li>
-			</ol>
-		</div>
+		<section class="outer-wrapper">
+			<div class="inner-wrapper">
+				<div class="bread-crumbs">
+					<a href="#">СЕМЕНА МАРИХУАНЫ</a>
+					<a href="#">ЛИЧНЫЙ КАБИНЕТ</a>
+					<a href="#">РЕГИСТРАЦИЯ</a>
+				</div>
+
+				<div class="form-inner">
+					<h1  class="title is-4 form-inner-title">
+						РЕГИСТРАЦИЯ
+					</h1>
+					<p class="bold text-center mb-32">
+						Если Вы уже зарегистрированы, перейдите на страницу <a href="#" class="de-york">авторизации</a>.
+					</p>
+					<form>
+						<div class="input-label-wrap">
+							<label for="name">
+								<span class="burnt-sienna">*</span>
+								Имя
+							</label>
+							<div class="input-wrap">
+								<i class="mdi mdi-card-account-details-outline burnt-sienna"></i>
+								<input type="text" id="name" placeholder="Имя" required>
+								<p class="input-error burnt-sienna">Это поле нужно заполнить</p>
+							</div>
+						</div>
+						<div class="input-label-wrap">
+							<label for="name2">
+								Фамилия
+							</label>
+							<div class="input-wrap">
+								<i class="mdi mdi-card-account-details-outline burnt-sienna"></i>
+								<input type="text" id="name2" placeholder="Фамилия">
+								<p class="input-error burnt-sienna">Это поле нужно заполнить</p>
+							</div>
+						</div>
+						<div class="input-label-wrap">
+							<label for="email">
+								<span class="burnt-sienna">*</span>
+								E-Mail
+							</label>
+							<div class="input-wrap">
+								<i class="mdi mdi-at burnt-sienna"></i>
+								<input type="email" id="email" placeholder="E-Mail" required>
+								<p class="input-error burnt-sienna">Это поле нужно заполнить</p>
+							</div>
+						</div>
+						<div class="input-label-wrap">
+							<label for="tel">
+								<span class="burnt-sienna">*</span>
+								Телефон
+							</label>
+							<div class="input-wrap">
+								<i class="mdi mdi-cellphone burnt-sienna"></i>
+								<input type="tel" id="tel" placeholder="Телефон" required>
+								<p class="input-error burnt-sienna">Это поле нужно заполнить</p>
+							</div>
+						</div>
+						<div class="input-label-wrap">
+							<label for="password">
+								<span class="burnt-sienna">*</span>
+								Пароль
+							</label>
+							<div class="input-wrap">
+								<i class="mdi mdi-lastpass burnt-sienna"></i>
+								<input type="password" id="password" placeholder="Пароль" required>
+								<p class="input-error burnt-sienna">Это поле нужно заполнить</p>
+							</div>
+						</div>
+						<div class="input-label-wrap">
+							<label for="password2">
+								<span class="burnt-sienna">*</span>
+								Подтвердить
+							</label>
+							<div class="input-wrap">
+								<i class="mdi mdi-lastpass burnt-sienna"></i>
+								<input type="password" id="password2" placeholder="Подтвердить пароль" required>
+								<p class="input-error burnt-sienna">Это поле нужно заполнить</p>
+							</div>
+						</div>
+
+						<div class="form-inner-pl">
+							<button type="submit" class="btn btn-green stretched">
+								Продолжить
+							</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</section>
 	</main>
 
 	<footer class="main-footer">
@@ -643,6 +715,11 @@
 			</p>
 		</div>
 	</footer>
+
+	<!-- Remove after dev -->
+	<div class="all-pages-link">
+		<a href="links.html" class="btn btn-primary">Все страницы</a>
+	</div>
 
 	<script src="js/scripts.min.js"></script>
 </body>
