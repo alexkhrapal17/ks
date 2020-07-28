@@ -341,4 +341,9 @@ $(function () {
             $('.toast-message').removeClass('show');
         }, 3500);
     });
+
+
+    if($('.filters-wrapper').hasClass('show')) {
+        $('.main-header').removeClass('is-hidden');
+    }
 });

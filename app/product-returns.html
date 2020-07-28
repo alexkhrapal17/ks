@@ -235,10 +235,10 @@
 						<div class="checkbox-wrapper">
 							<input type="checkbox" id="check">
 							<label for="check">
-								<span class="check-icon">
-									<i class="mdi mdi-checkbox-marked-outline checked"></i>
-									<i class="mdi mdi-checkbox-blank-outline not-checked"></i>
-								</span>
+						<span class="check-icon">
+							<i class="mdi mdi-checkbox-marked-outline checked"></i>
+							<i class="mdi mdi-checkbox-blank-outline not-checked"></i>
+						</span>
 								<p class="bold">Искать в описании товара</p>
 							</label>
 						</div>
@@ -437,8 +437,8 @@
 	<div class="mobile-menu">
 		<div class="d-flex justify-content-between">
 			<a href="index.html" class="mobile-menu-item">
-				<img src="img/icons/home.svg" alt="">
-				<!--<img src="img/icons/back.svg" alt="">-->
+				<!--<img src="img/icons/home.svg" alt="">-->
+				<img src="img/icons/back.svg" alt="">
 			</a>
 			<div class="mobile-menu-item categories-toggle">
 				<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -589,81 +589,218 @@
 			<div class="inner-wrapper">
 				<div class="bread-crumbs">
 					<a href="#">СЕМЕНА МАРИХУАНЫ</a>
-					<a href="#">КОРЗИНА ПОКУПОК</a>
-					<a href="#">ОФОРМЛЕНИЕ ЗАКАЗА</a>
+					<a href="#">ЛИЧНЫЙ КАБИНЕТ</a>
+					<a href="#">ВОЗВРАТ ТОВАРА</a>
+				</div>
+
+				<div>
+					<a href="#" class="back-btn">
+						<img src="img/icons/arrow.svg" alt="">
+						Назад
+					</a>
+				</div>
+
+				<div class="d-flex align-items-center flex-wrap justify-content-center acc-main-heading">
+					<h1  class="title is-4 d-block text-center text-uppercase">
+						ВОЗВРАТ ТОВАРА
+					</h1>
+
+					<a href="#" class="exit-btn">
+						Выйти
+						<i class="mdi mdi-logout-variant"></i>
+					</a>
 				</div>
 
 				<div class="form-inner">
-					<h1  class="title is-4 form-inner-title">
-						ВАШИ ДАННЫЕ
-					</h1>
 					<form>
-						<div class="input-label-wrap">
-							<label for="name">
-								<span class="burnt-sienna">*</span>
-								Имя
-							</label>
-							<div class="input-wrap">
-								<i class="mdi mdi-card-account-details-outline"></i>
-								<input type="text" id="name" placeholder="Имя" required>
-								<p class="input-error burnt-sienna">Это поле нужно заполнить</p>
+						<div class="returns-block">
+							<div class="input-label-wrap">
+								<label for="name">
+									<span class="burnt-sienna">*</span>
+									Имя
+								</label>
+								<div class="input-wrap">
+									<i class="mdi mdi-card-account-details-outline"></i>
+									<input type="text" id="name" placeholder="Имя" required>
+									<p class="input-error burnt-sienna">Это поле нужно заполнить</p>
+								</div>
 							</div>
-						</div>
-						<div class="input-label-wrap">
-							<label for="name2">
-								Псевдоним (данные для получения)
-							</label>
-							<div class="input-wrap">
-								<i class="mdi mdi-card-account-details-outline"></i>
-								<input type="text" id="name2" placeholder="Псевдоним">
-								<p class="input-error burnt-sienna">Это поле нужно заполнить</p>
+							<div class="input-label-wrap">
+								<label for="name2">
+									Псевдоним (данные для получения)
+								</label>
+								<div class="input-wrap">
+									<i class="mdi mdi-card-account-details-outline"></i>
+									<input type="text" id="name2" placeholder="Псевдоним">
+									<p class="input-error burnt-sienna">Это поле нужно заполнить</p>
+								</div>
 							</div>
-						</div>
-						<div class="input-label-wrap">
-							<label for="email">
-								E-Mail
-							</label>
-							<div class="input-wrap">
-								<i class="mdi mdi-at"></i>
-								<input type="email" id="email" placeholder="E-Mail Address">
-								<p class="input-error burnt-sienna">Это поле нужно заполнить</p>
+							<div class="input-label-wrap">
+								<label for="email">
+									E-Mail
+								</label>
+								<div class="input-wrap">
+									<i class="mdi mdi-at"></i>
+									<input type="email" id="email" placeholder="E-Mail Address">
+									<p class="input-error burnt-sienna">Это поле нужно заполнить</p>
+								</div>
 							</div>
-						</div>
-						<div class="input-label-wrap">
-							<label for="tel">
-								<span class="burnt-sienna">*</span>
-								Телефон
-							</label>
-							<div class="input-wrap">
-								<i class="mdi mdi-card-account-details-outline"></i>
-								<input type="tel" id="tel" placeholder="Телефон" required>
-								<p class="input-error burnt-sienna">Это поле нужно заполнить</p>
+							<div class="input-label-wrap">
+								<label for="tel">
+									<span class="burnt-sienna">*</span>
+									Телефон
+								</label>
+								<div class="input-wrap">
+									<i class="mdi mdi-card-account-details-outline"></i>
+									<input type="tel" id="tel" placeholder="Телефон" required>
+									<p class="input-error burnt-sienna">Это поле нужно заполнить</p>
+								</div>
 							</div>
-						</div>
-						<div class="input-label-wrap">
-							<label></label>
-							<div class="input-wrap">
-								<textarea placeholder="Вы можете добавить комментарий к своему заказу"></textarea>
-								<p class="input-error burnt-sienna">Это поле нужно заполнить</p>
+							<div class="input-label-wrap">
+								<label for="order-num">
+									<span class="burnt-sienna">*</span>
+									Номер заказа
+								</label>
+								<div class="input-wrap">
+									<i class="mdi mdi-identifier"></i>
+									<input type="text" id="order-num" placeholder="Номер заказа" required>
+									<p class="input-error burnt-sienna">Это поле нужно заполнить</p>
+								</div>
+							</div>
+							<div class="input-label-wrap">
+								<label for="order-date">
+									Дата заказа
+								</label>
+								<div class="input-wrap input-date">
+									<i class="mdi mdi-calendar"></i>
+									<input type="date" id="order-date" placeholder="Дата заказа" required>
+									<p class="input-error burnt-sienna">Это поле нужно заполнить</p>
+								</div>
 							</div>
 						</div>
 
-						<div class="d-flex justify-content-center form-inner-pl callback-off-wrapper">
-							<div class="checkbox-wrapper">
-								<input type="checkbox" id="call-off">
-								<label for="call-off">
-								<span class="check-icon">
-									<i class="mdi mdi-checkbox-marked-outline checked"></i>
-									<i class="mdi mdi-checkbox-blank-outline not-checked"></i>
-								</span>
-									<p class="bold">Не перезванивать мне</p>
+						<div class="returns-block">
+							<div class="acc-main-heading">
+								<h1  class="title is-4 d-block text-center text-uppercase">
+									Информация о заказе
+								</h1>
+							</div>
+							<div class="input-label-wrap no-icon">
+								<label for="product-name">
+									<span class="burnt-sienna">*</span>
+									Название продукта
 								</label>
+								<div class="input-wrap">
+									<input type="text" id="product-name" placeholder="Название продукта" required>
+									<p class="input-error burnt-sienna">Это поле нужно заполнить</p>
+								</div>
+							</div>
+							<div class="input-label-wrap no-icon">
+								<label for="product-code">
+									<span class="burnt-sienna">*</span>
+									Код продукта
+								</label>
+								<div class="input-wrap">
+									<input type="text" id="product-code" placeholder="Код продукта" required>
+									<p class="input-error burnt-sienna">Это поле нужно заполнить</p>
+								</div>
+							</div>
+							<div class="input-label-wrap no-icon">
+								<label for="quantity">
+									Количество
+								</label>
+								<div class="input-wrap">
+									<input type="number" id="quantity" placeholder="Количество" required>
+									<p class="input-error burnt-sienna">Это поле нужно заполнить</p>
+								</div>
 							</div>
 						</div>
 
 						<div class="form-inner-pl">
+							<div class="returns-block">
+								<div class="acc-main-heading">
+									<h1  class="title is-4 d-block text-center text-uppercase">
+										Причина возврата
+									</h1>
+								</div>
+
+								<div class="radio-wrapper">
+									<input type="radio" id="reason1" name="reasons">
+									<label for="reason1">
+										<span class="radio-icon"></span>
+										Другое (другая причина), пожалуйста, предоставьте / приложите детали
+									</label>
+								</div>
+								<div class="radio-wrapper">
+									<input type="radio" id="reason2" name="reasons">
+									<label for="reason2">
+										<span class="radio-icon"></span>
+										Заказ по ошибке
+									</label>
+								</div>
+								<div class="radio-wrapper">
+									<input type="radio" id="reason3" name="reasons">
+									<label for="reason3">
+										<span class="radio-icon"></span>
+										Неисправный, пожалуйста, предоставьте / приложите детали
+									</label>
+								</div>
+								<div class="radio-wrapper">
+									<input type="radio" id="reason4" name="reasons">
+									<label for="reason4">
+										<span class="radio-icon"></span>
+										Неправильный товар получен
+									</label>
+								</div>
+								<div class="radio-wrapper">
+									<input type="radio" id="reason5" name="reasons">
+									<label for="reason5">
+										<span class="radio-icon"></span>
+										Получен бракованный (сломанный)
+									</label>
+								</div>
+							</div>
+						</div>
+
+						<div class="form-inner-pl">
+							<div class="d-flex align-items-center justify-content-center justify-content-md-start mb-40">
+								<p class="mr-40">
+									<span class="burnt-sienna">*</span> Товар открыт
+								</p>
+								<label class="switch">
+									<input type="checkbox">
+									<div class="slider">
+										<div class="toggle-slide"></div>
+										<span class="on">Yes</span>
+										<span class="off">No</span>
+									</div>
+								</label>
+							</div>
+						</div>
+
+						<div class="form-inner-center">
+							<div class="input-label-wrap">
+								<div class="input-wrap">
+									<textarea placeholder="Неисправные или другие детали"></textarea>
+									<p class="input-error burnt-sienna">Это поле нужно заполнить</p>
+								</div>
+							</div>
+
+							<div class="d-flex justify-content-center mb-32">
+								<div class="checkbox-wrapper">
+									<input type="checkbox" id="agree">
+									<label for="agree">
+										<span class="check-icon">
+											<i class="mdi mdi-checkbox-marked-outline checked"></i>
+											<i class="mdi mdi-checkbox-blank-outline not-checked"></i>
+										</span>
+										<p class="bold">Я прочитал и согласен с <a href="#" class="de-york">Условиями</a></p>
+									</label>
+								</div>
+							</div>
+
 							<button type="submit" class="btn btn-green stretched">
-								Подтверждение заказа
+								Отправить
 							</button>
 						</div>
 					</form>

@@ -235,10 +235,10 @@
 						<div class="checkbox-wrapper">
 							<input type="checkbox" id="check">
 							<label for="check">
-								<span class="check-icon">
-									<i class="mdi mdi-checkbox-marked-outline checked"></i>
-									<i class="mdi mdi-checkbox-blank-outline not-checked"></i>
-								</span>
+						<span class="check-icon">
+							<i class="mdi mdi-checkbox-marked-outline checked"></i>
+							<i class="mdi mdi-checkbox-blank-outline not-checked"></i>
+						</span>
 								<p class="bold">Искать в описании товара</p>
 							</label>
 						</div>
@@ -589,84 +589,45 @@
 			<div class="inner-wrapper">
 				<div class="bread-crumbs">
 					<a href="#">СЕМЕНА МАРИХУАНЫ</a>
-					<a href="#">КОРЗИНА ПОКУПОК</a>
-					<a href="#">ОФОРМЛЕНИЕ ЗАКАЗА</a>
+					<a href="#">ЛИЧНЫЙ КАБИНЕТ</a>
 				</div>
 
-				<div class="form-inner">
-					<h1  class="title is-4 form-inner-title">
-						ВАШИ ДАННЫЕ
+				<div class="d-flex align-items-center flex-wrap justify-content-center acc-main-heading">
+					<h1  class="title is-4 d-block text-center text-uppercase">
+						ЛИЧНЫЙ КАБИНЕТ
 					</h1>
-					<form>
-						<div class="input-label-wrap">
-							<label for="name">
-								<span class="burnt-sienna">*</span>
-								Имя
-							</label>
-							<div class="input-wrap">
-								<i class="mdi mdi-card-account-details-outline"></i>
-								<input type="text" id="name" placeholder="Имя" required>
-								<p class="input-error burnt-sienna">Это поле нужно заполнить</p>
-							</div>
-						</div>
-						<div class="input-label-wrap">
-							<label for="name2">
-								Псевдоним (данные для получения)
-							</label>
-							<div class="input-wrap">
-								<i class="mdi mdi-card-account-details-outline"></i>
-								<input type="text" id="name2" placeholder="Псевдоним">
-								<p class="input-error burnt-sienna">Это поле нужно заполнить</p>
-							</div>
-						</div>
-						<div class="input-label-wrap">
-							<label for="email">
-								E-Mail
-							</label>
-							<div class="input-wrap">
-								<i class="mdi mdi-at"></i>
-								<input type="email" id="email" placeholder="E-Mail Address">
-								<p class="input-error burnt-sienna">Это поле нужно заполнить</p>
-							</div>
-						</div>
-						<div class="input-label-wrap">
-							<label for="tel">
-								<span class="burnt-sienna">*</span>
-								Телефон
-							</label>
-							<div class="input-wrap">
-								<i class="mdi mdi-card-account-details-outline"></i>
-								<input type="tel" id="tel" placeholder="Телефон" required>
-								<p class="input-error burnt-sienna">Это поле нужно заполнить</p>
-							</div>
-						</div>
-						<div class="input-label-wrap">
-							<label></label>
-							<div class="input-wrap">
-								<textarea placeholder="Вы можете добавить комментарий к своему заказу"></textarea>
-								<p class="input-error burnt-sienna">Это поле нужно заполнить</p>
-							</div>
-						</div>
 
-						<div class="d-flex justify-content-center form-inner-pl callback-off-wrapper">
-							<div class="checkbox-wrapper">
-								<input type="checkbox" id="call-off">
-								<label for="call-off">
-								<span class="check-icon">
-									<i class="mdi mdi-checkbox-marked-outline checked"></i>
-									<i class="mdi mdi-checkbox-blank-outline not-checked"></i>
-								</span>
-									<p class="bold">Не перезванивать мне</p>
-								</label>
-							</div>
-						</div>
+					<a href="#" class="exit-btn">
+						Выйти
+						<i class="mdi mdi-logout-variant"></i>
+					</a>
+				</div>
 
-						<div class="form-inner-pl">
-							<button type="submit" class="btn btn-green stretched">
-								Подтверждение заказа
-							</button>
+				<div class="confirm-email">
+					<p class="title is-4 burnt-sienna mb-8">Confirm your email</p>
+					<p class="bold mb-8">A confirmation email was sent to armen0788@gmail.com</p>
+					<p class="bold mb-8">Please check your email for instructions</p>
+					<p class="bold mb-8">Didn't receive the email? <a href="#" class="burnt-sienna">Click here to resend</a></p>
+				</div>
+
+				<div class="account-menu-wrapper">
+					<div class="row">
+						<div class="col-md-6">
+							<span class="title is-4 acc-title">Моя учетная запись</span>
+
+							<a href="#" class="acc-link">Основные данные</a>
+							<a href="#" class="acc-link">Изменить свой пароль</a>
+							<a href="#" class="acc-link">Изменить мои адреса</a>
 						</div>
-					</form>
+						<div class="col-md-6">
+							<span class="title is-4 acc-title">Мои заказы</span>
+
+							<a href="#" class="acc-link">История заказов</a>
+							<a href="#" class="acc-link">Бонусные баллы</a>
+							<a href="#" class="acc-link">Заявки на возврат</a>
+							<a href="#" class="acc-link">История платежей</a>
+						</div>
+					</div>
 				</div>
 			</div>
 		</section>

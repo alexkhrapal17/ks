@@ -122,6 +122,11 @@ ol {
       font-size: 13px;
       line-height: 16px;
       padding: 10px;
+
+      .mdi {
+        font-size: 30px;
+        line-height: 30px;
+      }
     }
 
     td {
@@ -500,7 +505,7 @@ main {
   }
 
   &.btn-sm {
-    padding: 10px 15px 8px 8px;
+    padding: 10px 15px 10px 8px;
 
     img {
       margin-right: 0;
@@ -626,6 +631,10 @@ main {
   }
 }
 
+.selectric-select-category {
+  width: 130px;
+}
+
 .sort-select-wrapper {
   .selectric-wrapper {
     .selectric {
@@ -740,6 +749,136 @@ main {
   opacity: 0;
   visibility: hidden;
   @include transition(.3s);
+}
+
+// Radio
+.radio-wrapper {
+  margin-bottom: 20px;
+
+  input {
+    display: none;
+
+    &:checked {
+      + label {
+        .radio-icon {
+          border-color: $burnt-sienna;
+
+          &:after {
+            opacity: 1;
+            visibility: visible;
+          }
+        }
+      }
+    }
+  }
+
+  label {
+    position: relative;
+    padding-left: 50px;
+    font-size: 13px;
+    line-height: 16px;
+    cursor: pointer;
+
+    @include phone {
+      padding-left: 30px;
+    }
+
+    .radio-icon {
+      @include center(vertical);
+      left: 0;
+      width: 20px;
+      height: 20px;
+      border: 2px solid $cornflower-blue;
+      border-radius: 50%;
+
+      &:after {
+        content: '';
+        display: block;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: $burnt-sienna;
+        opacity: 0;
+        visibility: hidden;
+        @include transition(.3s);
+        @include center(both);
+      }
+    }
+  }
+}
+
+// Switch
+.switch {
+  cursor: pointer;
+
+  input {
+    display: none;
+
+    &:checked {
+      + .slider {
+        .toggle-slide {
+          background: $de-york;
+
+          &:after {
+            transform: translateX(16px);
+          }
+        }
+
+        .on {
+          display: block;
+        }
+
+        .off {
+          display: none;
+        }
+      }
+    }
+  }
+
+  .slider {
+    display: flex;
+    align-items: center;
+
+    .toggle-slide {
+      width: 30px;
+      height: 14px;
+      background: rgba($east-bay, .33);
+      border-radius: 13px;
+      position: relative;
+      @include transition(.3s);
+
+      &:after {
+        content: '';
+        display: block;
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: $white;
+        position: absolute;
+        top: 3px;
+        left: 3px;
+        @include transition(.3s);
+      }
+    }
+
+    span {
+      font-size: 13px;
+      line-height: 14px;
+      margin-left: 20px;
+      min-width: 30px;
+      position: relative;
+      top: -1px;
+      @include transition(.3s);
+
+      &.on {
+        display: none;
+      }
+
+      &.off {
+        display: block;
+      }
+    }
+  }
 }
 
 // Counter
@@ -862,6 +1001,12 @@ main {
       padding: 0;
       text-align: center;
 
+      &:hover {
+        &:after {
+          color: $east-bay;
+        }
+      }
+
       &:after {
         display: inline-block;
         font: normal normal normal 24px/1 "Material Design Icons";
@@ -869,6 +1014,7 @@ main {
         text-rendering: auto;
         line-height: 30px;
         color: $burnt-sienna;
+        @include transition(.3s);
       }
 
       &.slick-prev {
@@ -1112,6 +1258,12 @@ main {
     }
   }
 
+  &.input-date {
+    @include phone {
+      overflow: hidden;
+    }
+  }
+
   &.error {
     .input-error {
       opacity: 1;
@@ -1139,10 +1291,19 @@ main {
     line-height: 16px;
     font-weight: $font-bold;
     color: $east-bay;
-    user-select: none;
 
     @include input-placeholder {
       color: $east-bay;
+    }
+
+    &::-webkit-calendar-picker-indicator {
+      opacity: 0;
+      cursor: pointer;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
     }
   }
   
@@ -1172,7 +1333,15 @@ main {
 
   @include phone {
     display: block;
-    margin-bottom: 16px;
+    margin-bottom: 25px;
+  }
+
+  &.no-icon {
+    .input-wrap {
+      input {
+        padding-left: 20px;
+      }
+    }
   }
   
   &.input-label-wrap-block {
@@ -1232,6 +1401,15 @@ main {
 
   @include phone {
     padding-left: 0;
+  }
+}
+
+.form-inner-center {
+  max-width: 320px;
+  margin: 0 auto;
+
+  @include phone {
+    max-width: 100%;
   }
 }
 
@@ -1492,5 +1670,11 @@ main {
 .btn-mobile-center {
   @include phone {
     text-align: center;
+  }
+}
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  body {
+    display: block;
   }
 }
