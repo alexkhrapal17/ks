@@ -451,11 +451,17 @@
 
     @include phone {
       width: calc(50% - 16px);
+      display: none;
+
+      &:nth-child(-n+5) {
+        display: block;
+      }
     }
 
     &:hover {
       color: inherit;
       box-shadow: $shadow;
+      border-color: transparent !important;
     }
 
     &.green-item {
@@ -570,6 +576,11 @@
 
   @include phone {
     width: calc(50% - 16px);
+    display: none;
+
+    &:nth-child(-n+5) {
+      display: block;
+    }
   }
 
   &:hover {
@@ -1369,6 +1380,7 @@
 
   @include phone {
     padding: 16px;
+    margin: 0 auto 40px;
   }
 }
 
@@ -1377,6 +1389,11 @@
   text-transform: uppercase;
   min-height: 44px;
   margin-bottom: 20px;
+
+  @include phone {
+    min-height: initial;
+    margin-top: 20px;
+  }
 }
 
 .account-menu-wrapper {

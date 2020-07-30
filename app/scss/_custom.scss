@@ -453,6 +453,10 @@ main {
     visibility: visible;
   }
 
+  .title {
+    word-break: inherit;
+  }
+
   .dropdown-item {
     display: block;
     margin-bottom: 16px;
@@ -1261,6 +1265,10 @@ main {
   &.input-date {
     @include phone {
       overflow: hidden;
+    }
+
+    input {
+      background: $white;
     }
   }
 
