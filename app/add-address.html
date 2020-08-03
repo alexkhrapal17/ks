@@ -437,8 +437,8 @@
 	<div class="mobile-menu">
 		<div class="d-flex justify-content-between">
 			<a href="index.html" class="mobile-menu-item">
-				<img src="img/icons/home.svg" alt="">
-				<!--<img src="img/icons/back.svg" alt="">-->
+				<!--<img src="img/icons/home.svg" alt="">-->
+				<img src="img/icons/back.svg" alt="">
 			</a>
 			<div class="mobile-menu-item categories-toggle">
 				<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -590,27 +590,71 @@
 				<div class="bread-crumbs">
 					<a href="#">СЕМЕНА МАРИХУАНЫ</a>
 					<a href="#">ЛИЧНЫЙ КАБИНЕТ</a>
-					<a href="#">УЧЁТНАЯ ЗАПИСЬ УСПЕШНО СОЗДАНА!</a>
+					<a href="#">УЧЕТНАЯ ЗАПИСЬ</a>
 				</div>
 
-				<div class="text-center">
-					<h1 class="title is-4 text-uppercase">ALMOST THERE... PLEASE VERIFY YOUR ACCOUNT!</h1>
+				<div>
+					<a href="#" class="back-btn">
+						<img src="img/icons/arrow.svg" alt="">
+						Назад
+					</a>
+				</div>
 
-					<div>
-						<img src="img/success-img.png" alt="">
-					</div>
+				<div class="acc-main-heading">
+					<h1  class="title is-4 d-block text-center text-uppercase">
+						Добавить адрес
+					</h1>
+				</div>
 
-					<p class="mb-16 bold">
-						A verification email has been sent to: <span class="de-york">exxtremum@gmail.com</span>
-					</p>
+				<div class="form-inner">
+					<form>
+						<div class="input-label-wrap no-icon">
+							<label for="country">
+								<span class="burnt-sienna">*</span>
+								Страна
+							</label>
+							<div class="input-wrap">
+								<input type="text" id="country" placeholder="Страна" required>
+								<p class="input-error burnt-sienna">Это поле нужно заполнить</p>
+							</div>
+						</div>
+						<div class="input-label-wrap no-icon">
+							<label for="city">
+								<span class="burnt-sienna">*</span>
+								Город
+							</label>
+							<div class="input-wrap">
+								<input type="text" id="city" placeholder="Город" required>
+								<p class="input-error burnt-sienna">Это поле нужно заполнить</p>
+							</div>
+						</div>
+						<div class="input-label-wrap no-icon">
+							<label for="region">
+								<span class="burnt-sienna">*</span>
+								Область
+							</label>
+							<div class="input-wrap">
+								<input type="text" id="region" placeholder="Область" required>
+								<p class="input-error burnt-sienna">Это поле нужно заполнить</p>
+							</div>
+						</div>
+						<div class="input-label-wrap no-icon">
+							<label for="street">
+								<span class="burnt-sienna">*</span>
+								Улица
+							</label>
+							<div class="input-wrap">
+								<input type="text" id="street" placeholder="Улица" required>
+								<p class="input-error burnt-sienna">Это поле нужно заполнить</p>
+							</div>
+						</div>
 
-					<p class="mb-16">
-						Please check your inbox and click the verification link to active your account!
-					</p>
-
-					<button class="btn btn-yellow min-width-155">
-						Продолжить
-					</button>
+						<div class="form-inner-pl mt-64 mt-sm-32">
+							<button type="submit" class="btn btn-green stretched">
+								Добавить
+							</button>
+						</div>
+					</form>
 				</div>
 			</div>
 		</section>

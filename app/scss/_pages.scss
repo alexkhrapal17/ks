@@ -223,7 +223,7 @@
     }
 
     .for-mobile {
-      margin-top: 20px;
+      margin-top: 16px;
     }
 
     .seed-details-row {
@@ -357,7 +357,7 @@
 
   @include desktop {
     display: block;
-    margin-top: 40px;
+    margin-top: 16px;
   }
 }
 
@@ -464,31 +464,29 @@
       border-color: transparent !important;
     }
 
-    &.green-item {
-      background: $de-york;
-      border-color: $de-york;
-    }
-
-    &.red-item {
-      background: $burnt-sienna;
-      border-color: $burnt-sienna;
-    }
-
-    &.yellow-item {
-      background: $cream-can;
-      border-color: $cream-can;
-    }
-
     &.green-border-item {
       border-color: $de-york;
+
+      &:hover {
+        background: $de-york;
+      }
     }
 
     &.red-border-item {
       border-color: $burnt-sienna;
+
+      &:hover {
+        background: $burnt-sienna;
+        color: $white;
+      }
     }
 
     &.yellow-border-item {
       border-color: $cream-can;
+
+      &:hover {
+        background: $cream-can;
+      }
     }
 
     &.gray-border-item {

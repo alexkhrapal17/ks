@@ -216,6 +216,12 @@
             visibility: visible;
             transform: translateX(0);
           }
+
+          .dropdown-item {
+            &:hover {
+              color: $de-york;
+            }
+          }
         }
       }
     }
@@ -733,9 +739,19 @@
   display: flex;
   align-items: center;
 
+  @include phone {
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
   .input-promo {
     flex: 1;
     margin-right: 16px;
+
+    @include phone {
+      margin-right: 0;
+      margin-bottom: 16px;
+    }
 
     input {
       display: block;
@@ -842,6 +858,12 @@
 
   @include tablet {
     display: block;
+  }
+
+  a {
+    &:hover {
+      color: $de-york;
+    }
   }
 }
 

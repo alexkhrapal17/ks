@@ -115,7 +115,7 @@
 								<a href="#" class="dropdown-item">Dropdown item 3</a>
 							</div>
 						</li>
-						<li>
+						<li class="show-mobile">
 							<a href="#" class="title is-4 text-uppercase">
 								ЛИЧНЫЙ КАБИНЕТ
 								<i class="mdi mdi-chevron-down"></i>
@@ -200,7 +200,7 @@
 				</a>
 			</div>
 			<div class="callback">
-				<button class="btn btn-primary">
+				<button class="btn btn-primary" data-toggle="modal" data-target="#callBackModal">
 					<i class="mdi mdi-cellphone"></i>
 					ПЕРЕЗВОНИТЕ
 				</button>
@@ -416,20 +416,20 @@
 		<div class="basket-mask"></div>
 
 		<div class="header-mobile-categories">
-			<a href="#" class="d-block title is-4 text-uppercase mb-16">АВТОФЕМИНИЗИРОВАННЫЕ</a>
-			<a href="#" class="d-block title is-4 text-uppercase mb-16">ФЕМИНИЗИРОВАННЫЕ</a>
-			<a href="#" class="d-block title is-4 text-uppercase mb-16">НЕ ФЕМИНИЗИРОВАННЫЕ</a>
-			<a href="#" class="d-block title is-4 text-uppercase mb-16">ФОТОПЕРИОДИЧНЫЕ</a>
-			<a href="#" class="d-block title is-4 text-uppercase mb-16">ДЛЯ НОВИЧКОВ</a>
-			<a href="#" class="d-block title is-4 text-uppercase mb-16">ИНДИКА</a>
-			<a href="#" class="d-block title is-4 text-uppercase mb-16">САТИВА</a>
-			<a href="#" class="d-block title is-4 text-uppercase mb-16">ГИБРИДЫ</a>
-			<a href="#" class="d-block title is-4 text-uppercase mb-16">ДЛЯ ПОМЕЩЕНИЯ</a>
-			<a href="#" class="d-block title is-4 text-uppercase mb-16">ДЛЯ УЛИЦЫ</a>
-			<a href="#" class="d-block title is-4 text-uppercase mb-16">МЕДИЦИНСКИЕ СОРТА</a>
-			<a href="#" class="d-block title is-4 text-uppercase mb-16">СЕМЕНА ПОШТУЧНО</a>
-			<a href="#" class="d-block title is-4 text-uppercase mb-16">ПОПУЛЯРНЫЕ СОРТА</a>
-			<a href="#" class="d-block title is-4 text-uppercase mb-16">МОЩНЫЕ</a>
+			<a href="#" class="d-block fz13 bold text-uppercase mb-16">АВТОФЕМИНИЗИРОВАННЫЕ</a>
+			<a href="#" class="d-block fz13 bold text-uppercase mb-16">ФЕМИНИЗИРОВАННЫЕ</a>
+			<a href="#" class="d-block fz13 bold text-uppercase mb-16">НЕ ФЕМИНИЗИРОВАННЫЕ</a>
+			<a href="#" class="d-block fz13 bold text-uppercase mb-16">ФОТОПЕРИОДИЧНЫЕ</a>
+			<a href="#" class="d-block fz13 bold text-uppercase mb-16">ДЛЯ НОВИЧКОВ</a>
+			<a href="#" class="d-block fz13 bold text-uppercase mb-16">ИНДИКА</a>
+			<a href="#" class="d-block fz13 bold text-uppercase mb-16">САТИВА</a>
+			<a href="#" class="d-block fz13 bold text-uppercase mb-16">ГИБРИДЫ</a>
+			<a href="#" class="d-block fz13 bold text-uppercase mb-16">ДЛЯ ПОМЕЩЕНИЯ</a>
+			<a href="#" class="d-block fz13 bold text-uppercase mb-16">ДЛЯ УЛИЦЫ</a>
+			<a href="#" class="d-block fz13 bold text-uppercase mb-16">МЕДИЦИНСКИЕ СОРТА</a>
+			<a href="#" class="d-block fz13 bold text-uppercase mb-16">СЕМЕНА ПОШТУЧНО</a>
+			<a href="#" class="d-block fz13 bold text-uppercase mb-16">ПОПУЛЯРНЫЕ СОРТА</a>
+			<a href="#" class="d-block fz13 bold text-uppercase mb-16">МОЩНЫЕ</a>
 		</div>
 	</header>
 
@@ -585,7 +585,7 @@
 	<!-- Mobile menu End -->
 
 	<main>
-		<section class="outer-wrapper">
+		<section class="outer-wrapper pt-40">
 			<div class="inner-wrapper">
 				<div class="bread-crumbs">
 					<a href="#">СЕМЕНА МАРИХУАНЫ</a>
@@ -719,7 +719,7 @@
 						<div class="form-inner-pl">
 							<div class="returns-block">
 								<div class="acc-main-heading">
-									<h1  class="title is-4 d-block text-center text-uppercase">
+									<h1  class="title is-4 d-block text-uppercase">
 										Причина возврата
 									</h1>
 								</div>
@@ -860,6 +860,35 @@
 	<!-- Remove after dev -->
 	<div class="all-pages-link">
 		<a href="links.html" class="btn btn-primary">Все страницы</a>
+	</div>
+
+	<!-- Callback Modal -->
+	<div class="modal fade" id="callBackModal" tabindex="-1" role="dialog" aria-labelledby="callBackModal" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-sm modal-dialog-centered" role="document">
+			<div class="modal-content">
+				<div class="close-modal" data-dismiss="modal" aria-label="Close">
+					<i class="mdi mdi-close"></i>
+				</div>
+				<span class="title is-4 mb-25 text-uppercase white">Заказать звонок</span>
+				<form>
+					<div class="input-wrap input-white-wrap error">
+						<input type="text" placeholder="Имя">
+						<p class="input-error white">Это поле нужно заполнить</p>
+					</div>
+					<div class="input-wrap input-white-wrap">
+						<input type="text" placeholder="Телефон или почта">
+						<p class="input-error white">Это поле нужно заполнить</p>
+					</div>
+
+					<div class="text-center">
+						<button type="submit" class="btn btn-green call-toast">
+							<i class="mdi mdi-comment-plus"></i>
+							Продолжить
+						</button>
+					</div>
+				</form>
+			</div>
+		</div>
 	</div>
 
 	<script src="js/scripts.min.js"></script>

@@ -45,6 +45,8 @@ p {
 }
 
 a {
+  font-size: 13px;
+  line-height: 16px;
   color: $east-bay;
   @include transition(.2s);
 
@@ -52,6 +54,11 @@ a {
     color: $burnt-sienna;
     text-decoration: none;
   }
+}
+
+.fz13 {
+  font-size: 13px;
+  line-height: 16px;
 }
 
 img {

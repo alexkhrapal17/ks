@@ -114,6 +114,16 @@ ol {
   border: 2px solid $east-bay;
   max-width: 740px;
 
+  &.table-gray-hover {
+    table {
+      tr {
+        &:hover {
+          background: rgba($east-bay, .33);
+        }
+      }
+    }
+  }
+
   table {
     width: 100%;
     border-collapse: collapse;
@@ -142,6 +152,7 @@ ol {
 
     tbody {
       tr {
+        cursor: pointer;
         border-bottom: 2px solid $east-bay;
         @include transition(.3s);
 
@@ -330,6 +341,14 @@ main {
 }
 
 // Custom dividers
+.pt-40 {
+  padding-top: 40px;
+
+  @include phone {
+    padding-top: 25px;
+  }
+}
+
 .mt-8 {
   margin-top: 8px;
 }
@@ -432,6 +451,25 @@ main {
 }
 .ml-50 {
   margin-left: 50px;
+}
+
+.mt-64 {
+  margin-top: 64px;
+}
+.mr-64 {
+  margin-right: 64px;
+}
+.mb-64 {
+  margin-bottom: 64px;
+}
+.ml-64 {
+  margin-left: 64px;
+}
+
+.mt-sm-32 {
+  @include phone {
+    margin-top: 32px !important;
+  }
 }
 
 // Dropdown
@@ -622,10 +660,11 @@ main {
 
       li {
         background: none;
-        font-size: 18px;
-        line-height: 22px;
+        font-size: 13px;
+        line-height: 18px;
         font-weight: $font-bold;
         color: $east-bay;
+        padding: 5px 10px;
 
         &.selected {
           color: $burnt-sienna;
@@ -961,7 +1000,7 @@ main {
   .product-slider-for {
     width: 100%;
     height: 500px;
-    margin-bottom: 6px;
+    margin-bottom: 8px;
 
     @include desktop {
       height: 340px;
@@ -985,7 +1024,7 @@ main {
   }
 
   .product-slider-nav {
-    padding: 0 50px;
+    padding: 0 39px;
 
     @include phone {
       padding-left: 0;
@@ -1022,7 +1061,7 @@ main {
       }
 
       &.slick-prev {
-        left: 10px;
+        left: 5px;
 
         @include phone {
           display: none !important;
@@ -1034,7 +1073,7 @@ main {
       }
 
       &.slick-next {
-        right: 10px;
+        right: 5px;
 
         &:after {
           content: "\F0142";
@@ -1045,7 +1084,7 @@ main {
     .product-slide-nav {
       width: 90px;
       height: 90px;
-      margin: 5px;
+      margin: 8px;
       border: 2px solid rgba($east-bay, .33);
       border-radius: 15px;
       @include transition(.3s);
@@ -1212,6 +1251,7 @@ main {
       border-radius: 50%;
       background: $de-york;
       margin-top: -7px;
+      cursor: pointer;
 
       i {
         display: none;
@@ -1249,7 +1289,7 @@ main {
 }
 
 .input-wrap {
-  margin-bottom: 32px;
+  margin-bottom: 40px;
   position: relative;
 
   @include phone {
@@ -1341,7 +1381,7 @@ main {
 
   @include phone {
     display: block;
-    margin-bottom: 25px;
+    margin-bottom: 16px;
   }
 
   &.no-icon {
@@ -1492,7 +1532,15 @@ main {
 
 .modal-dialog {
   max-width: 630px;
-  margin: 30px 16px;
+  margin: 30px auto;
+
+  @include phone {
+    margin: 30px 16px;
+  }
+
+  &.modal-dialog-sm {
+    max-width: 320px;
+  }
 }
 
 .modal-content {
