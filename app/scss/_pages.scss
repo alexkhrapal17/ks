@@ -196,7 +196,7 @@
       overflow: initial;
 
       @include phone {
-        height: 220px;
+        height: 160px;
       }
 
       &:after {
@@ -204,7 +204,7 @@
       }
 
       .seed-details {
-        padding: 5px;
+        padding: 10px 32px;
         height: calc(100% - 40px);
       }
 
@@ -228,12 +228,24 @@
 
     .seed-details-row {
       display: block;
-      text-align: center;
+
+      p {
+        font-size: 10px;
+        line-height: 12px;
+
+        @include desktop {
+          text-align: center;
+        }
+      }
       
       .seed-details-label {
         width: auto;
-        text-align: center;
+        text-align: left;
         margin-right: 0;
+
+        @include desktop {
+          text-align: center;
+        }
       }
     }
   }
@@ -1481,13 +1493,69 @@
 // Order history
 .order-table-desktop {
   @include phone {
-    overflow: auto;
+    display: none;
+  }
+}
+.order-table-mobile {
+  display: none;
 
-    .table-wrapper {
-      width: 800px;
-      margin: 0;
+  @include phone {
+    display: block;
+    border-radius: 8px;
+    border: 2px solid $east-bay;
+    position: relative;
+  }
+
+  .table-fixed-nav {
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    border-radius: 8px 0 0 8px;
+    width: 120px;
+    height: calc(100% + 2px);
+    background: $east-bay;
+    text-align: right;
+    padding: 25px 18px;
+
+    p {
+      min-height: 48px;
+      margin-bottom: 10px;
     }
   }
+
+  .table-scroll-block {
+    padding-left: 120px;
+
+    .table-scroll-wrapper-cols {
+      overflow: auto;
+      width: 100%;
+      display: flex;
+      padding-left: 30px;
+    }
+
+    .table-scroll-col {
+      padding: 24px 20px 24px 0;
+      min-width: 130px;
+
+      .mdi {
+        font-size: 30px;
+        line-height: 30px;
+      }
+
+      p {
+        min-height: 48px;
+        margin-bottom: 10px;
+      }
+    }
+  }
+}
+
+.table-scroll-empty {
+  min-height: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 // Returns product

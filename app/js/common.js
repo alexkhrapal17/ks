@@ -313,11 +313,17 @@ $(function () {
         $(this).closest('li').find('.dropdown').removeClass('show');
         $('.main-nav').removeClass('o-hidden');
     });
+    $('.mobile-back-left-reset').on('click', function () {
+        $('.categories-toggle').removeClass('active');
+        $('.header-mobile-categories').removeClass('show');
+        $('body').removeClass('o-hidden');
+        $('.main-nav').removeClass('o-hidden');
+    });
 
 
     // Categories toggle
     $('.categories-toggle').on('click', function () {
-        $(this).toggleClass('active');
+        $('.categories-toggle').toggleClass('active');
         $('.header-mobile-categories').toggleClass('show');
         $('body').toggleClass('o-hidden');
         $('.main-header').removeClass('is-hidden');

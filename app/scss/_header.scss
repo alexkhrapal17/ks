@@ -69,7 +69,7 @@
   }
 
   a {
-    margin: 0 16px;
+    margin: 0 10px;
 
     &:first-child {
       margin-left: 0;
@@ -141,11 +141,8 @@
 
       .title {
         display: block;
-
-        @media (max-width: 1600px) {
-          font-size: 14px;
-          line-height: 16px;
-        }
+        font-size: 14px;
+        line-height: 16px;
 
         @include tablet {
           font-size: 18px;
@@ -232,16 +229,27 @@
   display: none;
 
   @include tablet {
-    display: block;
-    position: absolute;
-    top: 4px;
-    left: 10px;
-    width: 34px;
-    height: 44px;
-    text-align: center;
+    display: flex;
+    align-items: center;
+    color: $de-york;
+    position: relative;
+    left: -29px;
+    margin-bottom: 16px;
 
     .mdi {
-      line-height: 44px !important;
+      top: 0 !important;
+      left: -7px;
+      font-size: 30px;
+      line-height: 20px;
+      color: $burnt-sienna;
+    }
+  }
+
+  &.mobile-back-left-reset {
+    left: 0;
+
+    .mdi {
+      position: relative;
     }
   }
 }
@@ -298,6 +306,12 @@
         width: 16px;
         height: 16px;
       }
+    }
+
+    p {
+      flex: 1;
+      text-align: justify;
+      font-family: "Franklin Gothic Medium", sans-serif;
     }
   }
 }
