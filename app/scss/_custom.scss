@@ -121,7 +121,7 @@ ol {
           background: rgba($east-bay, .33);
 
           .mdi {
-            color: $burnt-sienna;
+            color: $white;
           }
         }
       }
@@ -251,9 +251,21 @@ main {
   }
 
   img {
+    margin-right: 8px;
+
     @include phone {
       width: 64px;
       height: 64px;
+    }
+  }
+
+  &.special-for-designer-title {
+    img {
+      @include phone {
+        width: 100px;
+        height: 100px;
+        margin-right: 8px;
+      }
     }
   }
 

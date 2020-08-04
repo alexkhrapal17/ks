@@ -310,6 +310,8 @@
 
     @include phone {
       height: 300px;
+      max-width: 300px;
+      margin: 0 auto 16px;
     }
 
     &:after {
@@ -999,6 +1001,7 @@
   border-radius: 13px;
   background: $white;
   height: 100%;
+  cursor: pointer;
   @include transition(.3s);
 
   @include phone {
